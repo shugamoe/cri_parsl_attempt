@@ -1,0 +1,144 @@
+2020-12-18 12:22:17.225 parsl.dataflow.dflow:82 [DEBUG]  Starting DataFlowKernel with config
+Config(
+    app_cache=True, 
+    checkpoint_files=None, 
+    checkpoint_mode=None, 
+    checkpoint_period=None, 
+    data_management_max_threads=10, 
+    executors=[HighThroughputExecutor(
+        address='10.50.178.250', 
+        address_probe_timeout=None, 
+        cores_per_worker=1, 
+        heartbeat_period=30, 
+        heartbeat_threshold=120, 
+        interchange_port_range=(55000, 56000), 
+        label='gardner_plink_1ppn', 
+        launch_cmd='process_worker_pool.py {debug} {max_workers} -a {addresses} -p {prefetch_capacity} -c {cores_per_worker} -m {mem_per_worker} --poll {poll_period} --task_port={task_port} --result_port={result_port} --logdir={logdir} --block_id={{block_id}} --hb_period={heartbeat_period} {address_probe_timeout_string} --hb_threshold={heartbeat_threshold} ', 
+        managed=True, 
+        max_workers=inf, 
+        mem_per_worker=None, 
+        poll_period=10, 
+        prefetch_capacity=0, 
+        provider=TorqueProvider(
+            account=None, 
+            channel=LocalChannel(
+                envs={}, 
+                script_dir=None, 
+                userhome='/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl'
+            ), 
+            cmd_timeout=120, 
+            init_blocks=1, 
+            launcher=AprunLauncher(overrides=''), 
+            max_blocks=1, 
+            min_blocks=0, 
+            nodes_per_block=1, 
+            parallelism=1, 
+            queue=None, 
+            scheduler_options='#PBS -l mem=2gb', 
+            walltime='01:00:00', 
+            worker_init="module load gcc/6.2.0; module load plink/2.0; module load python/3.8.1; python3 -c 'import parsl; print(parsl.__version__)'"
+        ), 
+        storage_access=None, 
+        worker_debug=False, 
+        worker_logdir_root=None, 
+        worker_port_range=(54000, 55000), 
+        worker_ports=None, 
+        working_dir=None
+    )], 
+    initialize_logging=True, 
+    max_idletime=120.0, 
+    monitoring=None, 
+    retries=0, 
+    run_dir='runinfo', 
+    strategy='simple', 
+    usage_tracking=False
+)
+2020-12-18 12:22:17.226 parsl.dataflow.dflow:87 [INFO]  Parsl version: 1.0.0
+2020-12-18 12:22:17.226 parsl.dataflow.usage_tracking.usage:126 [DEBUG]  Tracking status: False
+2020-12-18 12:22:17.226 parsl.dataflow.dflow:114 [INFO]  Run id is: 752a1dcb-8e1e-4f3f-81f2-8a93527aff43
+2020-12-18 12:22:17.589 parsl.dataflow.memoization:128 [INFO]  App caching initialized
+2020-12-18 12:22:17.589 parsl.dataflow.strategy:128 [DEBUG]  Scaling strategy: simple
+2020-12-18 12:22:17.593 parsl.executors.high_throughput.executor:457 [DEBUG]  Starting queue management thread
+2020-12-18 12:22:17.594 parsl.executors.high_throughput.executor:341 [DEBUG]  [MTHREAD] queue management worker starting
+2020-12-18 12:22:17.594 parsl.executors.high_throughput.executor:461 [DEBUG]  Started queue management thread
+2020-12-18 12:22:17.622 parsl.executors.high_throughput.executor:304 [DEBUG]  Created management thread: <Thread(HTEX-Queue-Management-Thread, started daemon 140335841801984)>
+2020-12-18 12:22:17.622 parsl.executors.high_throughput.executor:280 [DEBUG]  Launch command: process_worker_pool.py   -a 10.50.178.250 -p 0 -c 1 -m None --poll 10 --task_port=54183 --result_port=54924 --logdir=/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl/runinfo/001/gardner_plink_1ppn --block_id={block_id} --hb_period=30  --hb_threshold=120 
+2020-12-18 12:22:17.623 parsl.executors.high_throughput.executor:283 [DEBUG]  Starting HighThroughputExecutor with provider:
+TorqueProvider(
+    account=None, 
+    channel=LocalChannel(
+        envs={}, 
+        script_dir='/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl/runinfo/001/submit_scripts', 
+        userhome='/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl'
+    ), 
+    cmd_timeout=120, 
+    init_blocks=1, 
+    launcher=AprunLauncher(overrides=''), 
+    max_blocks=1, 
+    min_blocks=0, 
+    nodes_per_block=1, 
+    parallelism=1, 
+    queue=None, 
+    scheduler_options='#PBS -l mem=2gb', 
+    walltime='01:00:00', 
+    worker_init="module load gcc/6.2.0; module load plink/2.0; module load python/3.8.1; python3 -c 'import parsl; print(parsl.__version__)'"
+)
+2020-12-18 12:22:17.629 parsl.providers.torque.torque:177 [DEBUG]  Requesting nodes_per_block:1 tasks_per_node:1
+2020-12-18 12:22:17.629 parsl.providers.torque.torque:197 [DEBUG]  Writing submit script
+2020-12-18 12:22:17.716 parsl.executors.high_throughput.executor:581 [DEBUG]  Launched block 0->27363351.cri16sc001
+2020-12-18 12:22:17.720 parsl.dataflow.task_status_poller:74 [DEBUG]  Adding executor gardner_plink_1ppn
+2020-12-18 12:22:17.721 parsl.dataflow.dflow:533 [DEBUG]  Adding output dependencies
+2020-12-18 12:22:17.721 parsl.dataflow.dflow:772 [INFO]  Task 0 submitted for App echo_hello, not waiting on any dependency
+2020-12-18 12:22:17.721 parsl.dataflow.dflow:780 [DEBUG]  Task 0 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7fa28c75c280 state=pending>>
+2020-12-18 12:22:17.721 parsl.dataflow.memoization:196 [DEBUG]  Task 0 will not be memoized
+2020-12-18 12:22:17.722 parsl.executors.high_throughput.executor:546 [DEBUG]  Pushing function <function echo_hello at 0x7fa2a044ea50> to queue with args (<function echo_hello at 0x7fa28c7b0cd0>,)
+2020-12-18 12:22:18.084 parsl.dataflow.dflow:500 [INFO]  Task 0 launched on executor gardner_plink_1ppn
+2020-12-18 12:22:18.590 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2020-12-18 12:22:18.590 parsl.dataflow.task_status_poller:26 [DEBUG]  Polling gardner_plink_1ppn
+2020-12-18 12:22:18.639 parsl.providers.torque.torque:129 [DEBUG]  coerced job_id 27363351.cri16sc001 -> 27363351.cri16sc001
+2020-12-18 12:22:18.643 parsl.dataflow.strategy:204 [DEBUG]  Executor gardner_plink_1ppn has 1 active tasks, 0/1 running/pending blocks, and 0 connected workers
+2020-12-18 12:22:23.590 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2020-12-18 12:22:23.593 parsl.dataflow.strategy:204 [DEBUG]  Executor gardner_plink_1ppn has 1 active tasks, 0/1 running/pending blocks, and 0 connected workers
+2020-12-18 12:22:28.590 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2020-12-18 12:22:28.593 parsl.dataflow.strategy:204 [DEBUG]  Executor gardner_plink_1ppn has 1 active tasks, 0/1 running/pending blocks, and 0 connected workers
+2020-12-18 12:22:33.590 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2020-12-18 12:22:33.593 parsl.dataflow.strategy:204 [DEBUG]  Executor gardner_plink_1ppn has 1 active tasks, 0/1 running/pending blocks, and 0 connected workers
+2020-12-18 12:22:38.590 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2020-12-18 12:22:38.593 parsl.dataflow.strategy:204 [DEBUG]  Executor gardner_plink_1ppn has 1 active tasks, 0/1 running/pending blocks, and 0 connected workers
+2020-12-18 12:22:43.591 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2020-12-18 12:22:43.593 parsl.dataflow.strategy:204 [DEBUG]  Executor gardner_plink_1ppn has 1 active tasks, 0/1 running/pending blocks, and 0 connected workers
+2020-12-18 12:22:48.591 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2020-12-18 12:22:48.594 parsl.dataflow.strategy:204 [DEBUG]  Executor gardner_plink_1ppn has 1 active tasks, 0/1 running/pending blocks, and 0 connected workers
+2020-12-18 12:22:53.591 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2020-12-18 12:22:53.594 parsl.dataflow.strategy:204 [DEBUG]  Executor gardner_plink_1ppn has 1 active tasks, 0/1 running/pending blocks, and 0 connected workers
+2020-12-18 12:22:58.591 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2020-12-18 12:22:58.594 parsl.dataflow.strategy:204 [DEBUG]  Executor gardner_plink_1ppn has 1 active tasks, 0/1 running/pending blocks, and 0 connected workers
+2020-12-18 12:23:03.591 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2020-12-18 12:23:03.594 parsl.dataflow.strategy:204 [DEBUG]  Executor gardner_plink_1ppn has 1 active tasks, 0/1 running/pending blocks, and 0 connected workers
+2020-12-18 12:23:08.591 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2020-12-18 12:23:08.594 parsl.dataflow.strategy:204 [DEBUG]  Executor gardner_plink_1ppn has 1 active tasks, 0/1 running/pending blocks, and 0 connected workers
+2020-12-18 12:23:13.592 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2020-12-18 12:23:13.594 parsl.dataflow.strategy:204 [DEBUG]  Executor gardner_plink_1ppn has 1 active tasks, 0/1 running/pending blocks, and 0 connected workers
+2020-12-18 12:23:18.592 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2020-12-18 12:23:18.592 parsl.dataflow.task_status_poller:26 [DEBUG]  Polling gardner_plink_1ppn
+2020-12-18 12:23:18.642 parsl.providers.torque.torque:129 [DEBUG]  coerced job_id 27363351.cri16sc001 -> 27363351.cri16sc001
+2020-12-18 12:23:18.645 parsl.dataflow.strategy:204 [DEBUG]  Executor gardner_plink_1ppn has 1 active tasks, 0/1 running/pending blocks, and 0 connected workers
+2020-12-18 12:23:23.592 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2020-12-18 12:23:23.595 parsl.dataflow.strategy:204 [DEBUG]  Executor gardner_plink_1ppn has 1 active tasks, 0/1 running/pending blocks, and 0 connected workers
+2020-12-18 12:23:28.592 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2020-12-18 12:23:28.595 parsl.dataflow.strategy:204 [DEBUG]  Executor gardner_plink_1ppn has 1 active tasks, 0/1 running/pending blocks, and 0 connected workers
+2020-12-18 12:23:33.592 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2020-12-18 12:23:33.595 parsl.dataflow.strategy:204 [DEBUG]  Executor gardner_plink_1ppn has 1 active tasks, 0/1 running/pending blocks, and 0 connected workers
+2020-12-18 12:23:38.593 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2020-12-18 12:23:38.595 parsl.dataflow.strategy:204 [DEBUG]  Executor gardner_plink_1ppn has 1 active tasks, 0/1 running/pending blocks, and 0 connected workers
+2020-12-18 12:23:43.593 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2020-12-18 12:23:43.595 parsl.dataflow.strategy:204 [DEBUG]  Executor gardner_plink_1ppn has 1 active tasks, 0/1 running/pending blocks, and 0 connected workers
+2020-12-18 12:23:48.054 parsl.dataflow.dflow:913 [INFO]  DFK cleanup initiated
+2020-12-18 12:23:48.055 parsl.dataflow.dflow:816 [INFO]  Summary of tasks in DFK:
+2020-12-18 12:23:48.055 parsl.dataflow.dflow:829 [INFO]  Tasks in state States.launched: 1
+2020-12-18 12:23:48.056 parsl.dataflow.dflow:835 [INFO]  End of summary
+2020-12-18 12:23:48.056 parsl.dataflow.dflow:937 [INFO]  Terminating flow_control and strategy threads
+2020-12-18 12:23:48.105 parsl.executors.high_throughput.executor:642 [INFO]  Attempting HighThroughputExecutor shutdown
+2020-12-18 12:23:48.106 parsl.executors.high_throughput.executor:644 [INFO]  Finished HighThroughputExecutor shutdown attempt
+2020-12-18 12:23:48.106 parsl.executors.threads:105 [DEBUG]  Done with executor shutdown
+2020-12-18 12:23:48.107 parsl.dataflow.dflow:960 [INFO]  DFK cleanup complete

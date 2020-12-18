@@ -1,0 +1,6 @@
+2020-12-18 12:20:14.284 interchange:165 [INFO]  Attempting connection to client at 127.0.0.1 on ports: 55594,55847,55036
+2020-12-18 12:20:14.286 interchange:179 [INFO]  Connected to client
+2020-12-18 12:20:14.286 interchange:214 [INFO]  Bound to ports 54728,54252 for incoming worker connections
+2020-12-18 12:20:14.287 interchange:229 [INFO]  Platform info: {'parsl_v': '1.0.0', 'python_v': '3.8.1', 'os': 'Linux', 'hostname': 'cri16in001', 'dir': '/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl'}
+2020-12-18 12:20:14.287 interchange:347 [INFO]  Incoming ports bound
+2020-12-18 12:20:14.288 interchange:264 [INFO]  [TASK_PULL_THREAD] Starting

@@ -1,3 +1,0 @@
-/home/jmcclellan/.local/lib/python3.8/site-packages/ipyparallel/client/view.py:8: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
-  import imp
-/var/spool/torque/mom_priv/jobs/27363021.cri16sc001.SC: line 45: process_worker_pool.py: command not found

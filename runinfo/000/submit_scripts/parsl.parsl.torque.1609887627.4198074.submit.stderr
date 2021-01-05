@@ -1,4 +1,0 @@
-/home/jmcclellan/.local/lib/python3.8/site-packages/ipyparallel/client/view.py:8: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
-  import imp
-/home/jmcclellan/.local/lib/python3.8/site-packages/ipyparallel/client/view.py:8: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
-  import imp

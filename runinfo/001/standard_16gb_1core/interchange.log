@@ -1,0 +1,14 @@
+2021-01-05 17:02:43.650 interchange:165 [INFO]  Attempting connection to client at 127.0.0.1 on ports: 55585,55530,55311
+2021-01-05 17:02:43.653 interchange:179 [INFO]  Connected to client
+2021-01-05 17:02:43.654 interchange:214 [INFO]  Bound to ports 54926,54734 for incoming worker connections
+2021-01-05 17:02:43.654 interchange:229 [INFO]  Platform info: {'parsl_v': '1.0.0', 'python_v': '3.8.1', 'os': 'Linux', 'hostname': 'cri16in001', 'dir': '/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl'}
+2021-01-05 17:02:43.655 interchange:347 [INFO]  Incoming ports bound
+2021-01-05 17:02:43.656 interchange:264 [INFO]  [TASK_PULL_THREAD] Starting
+2021-01-05 17:03:36.786 interchange:408 [INFO]  [MAIN] Adding manager: b'932ac09c878a' to ready queue
+2021-01-05 17:03:36.786 interchange:410 [INFO]  [MAIN] Registration info for manager b'932ac09c878a': {'parsl_v': '1.0.0', 'python_v': '3.8.1', 'worker_count': 28, 'block_id': '1', 'prefetch_capacity': 0, 'max_capacity': 28, 'os': 'Linux', 'hostname': 'cri16cn006', 'dir': '/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl', 'cpu_count': 28, 'total_memory': 135210475520, 'reg_time': datetime.datetime(2021, 1, 5, 17, 3, 36)}
+2021-01-05 17:03:36.786 interchange:430 [INFO]  [MAIN] Manager b'932ac09c878a' has compatible Parsl version 1.0.0
+2021-01-05 17:03:36.786 interchange:431 [INFO]  [MAIN] Manager b'932ac09c878a' has compatible Python version 3.8
+2021-01-05 17:03:36.931 interchange:408 [INFO]  [MAIN] Adding manager: b'cdb487ff3ccd' to ready queue
+2021-01-05 17:03:36.932 interchange:410 [INFO]  [MAIN] Registration info for manager b'cdb487ff3ccd': {'parsl_v': '1.0.0', 'python_v': '3.8.1', 'worker_count': 28, 'block_id': '0', 'prefetch_capacity': 0, 'max_capacity': 28, 'os': 'Linux', 'hostname': 'cri16cn007', 'dir': '/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl', 'cpu_count': 28, 'total_memory': 135210475520, 'reg_time': datetime.datetime(2021, 1, 5, 17, 3, 36)}
+2021-01-05 17:03:36.932 interchange:430 [INFO]  [MAIN] Manager b'cdb487ff3ccd' has compatible Parsl version 1.0.0
+2021-01-05 17:03:36.932 interchange:431 [INFO]  [MAIN] Manager b'cdb487ff3ccd' has compatible Python version 3.8

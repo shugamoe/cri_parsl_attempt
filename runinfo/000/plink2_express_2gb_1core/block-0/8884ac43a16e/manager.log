@@ -1,0 +1,156 @@
+2021-01-05 17:00:22.379 parsl:607 Rank:0 [INFO]  Python version: 3.8.1 (default, Jan 20 2020, 04:56:27) 
+[GCC 6.2.0]
+2021-01-05 17:00:22.379 parsl:608 Rank:0 [INFO]  Debug logging: True
+2021-01-05 17:00:22.380 parsl:609 Rank:0 [INFO]  Log dir: /gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl/runinfo/000/plink2_express_2gb_1core
+2021-01-05 17:00:22.380 parsl:610 Rank:0 [INFO]  Manager ID: 8884ac43a16e
+2021-01-05 17:00:22.380 parsl:611 Rank:0 [INFO]  Block ID: 0
+2021-01-05 17:00:22.380 parsl:612 Rank:0 [INFO]  cores_per_worker: 1
+2021-01-05 17:00:22.380 parsl:613 Rank:0 [INFO]  mem_per_worker: None
+2021-01-05 17:00:22.380 parsl:614 Rank:0 [INFO]  task_port: 54937
+2021-01-05 17:00:22.381 parsl:615 Rank:0 [INFO]  result_port: 54533
+2021-01-05 17:00:22.381 parsl:616 Rank:0 [INFO]  addresses: cri16in001
+2021-01-05 17:00:22.381 parsl:617 Rank:0 [INFO]  max_workers: inf
+2021-01-05 17:00:22.381 parsl:618 Rank:0 [INFO]  poll_period: 10
+2021-01-05 17:00:22.381 parsl:619 Rank:0 [INFO]  address_probe_timeout: 30
+2021-01-05 17:00:22.382 parsl:620 Rank:0 [INFO]  Prefetch capacity: 0
+2021-01-05 17:00:22.382 parsl:621 Rank:0 [INFO]  Heartbeat threshold: 120
+2021-01-05 17:00:22.382 parsl:622 Rank:0 [INFO]  Heartbeat period: 30
+2021-01-05 17:00:22.382 parsl:122 Rank:0 [INFO]  Manager started
+2021-01-05 17:00:22.383 parsl.executors.high_throughput.probe:34 Rank:0 [DEBUG]  Trying to connect back on tcp://cri16in001:54937
+2021-01-05 17:00:22.394 parsl.executors.high_throughput.probe:47 Rank:0 [INFO]  Connected to interchange on cri16in001
+2021-01-05 17:00:22.394 parsl:129 Rank:0 [INFO]  Connection to Interchange successful on cri16in001
+2021-01-05 17:00:22.395 parsl:132 Rank:0 [INFO]  Task url : tcp://cri16in001:54937
+2021-01-05 17:00:22.395 parsl:133 Rank:0 [INFO]  Result url : tcp://cri16in001:54533
+2021-01-05 17:00:22.395 parsl:151 Rank:0 [INFO]  Manager connected
+2021-01-05 17:00:22.397 parsl:177 Rank:0 [INFO]  Manager will spawn 28 workers
+2021-01-05 17:00:22.669 parsl:399 Rank:0 [DEBUG]  Manager synced with workers
+2021-01-05 17:00:22.696 parsl:228 Rank:0 [INFO]  [TASK PULL THREAD] starting
+2021-01-05 17:00:22.709 parsl:234 Rank:0 [DEBUG]  Sending registration message: b'{"parsl_v": "1.0.0", "python_v": "3.8.1", "worker_count": 28, "block_id": "0", "prefetch_capacity": 0, "max_capacity": 28, "os": "Linux", "hostname": "cri16cn002", "dir": "/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl", "cpu_count": 28, "total_memory": 135210475520, "reg_time": "2021-01-05 17:00:22"}'
+2021-01-05 17:00:22.710 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:15, pending tasks:0
+2021-01-05 17:00:22.710 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 15
+2021-01-05 17:00:22.710 parsl:308 Rank:0 [DEBUG]  [RESULT_PUSH_THREAD] Starting thread
+2021-01-05 17:00:22.710 parsl:311 Rank:0 [DEBUG]  [RESULT_PUSH_THREAD] push poll period: 0.01
+2021-01-05 17:00:22.714 parsl:344 Rank:0 [DEBUG]  [WORKER_WATCHDOG_THREAD] Starting thread
+2021-01-05 17:00:22.714 parsl:414 Rank:0 [INFO]  Loop start
+2021-01-05 17:00:22.714 parsl:276 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Got tasks: [1] of 1
+2021-01-05 17:00:22.719 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:15, pending tasks:1
+2021-01-05 17:00:22.720 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 15
+2021-01-05 17:00:22.720 parsl:285 Rank:0 [DEBUG]  [TASK_PULL_THREAD] No incoming tasks
+2021-01-05 17:00:22.720 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:15, pending tasks:1
+2021-01-05 17:00:22.720 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 15
+2021-01-05 17:00:22.740 parsl:285 Rank:0 [DEBUG]  [TASK_PULL_THREAD] No incoming tasks
+2021-01-05 17:00:22.740 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:16, pending tasks:0
+2021-01-05 17:00:22.740 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 16
+2021-01-05 17:00:22.776 parsl.addresses:63 Rank:0 [DEBUG]  Finding address by using local hostname
+2021-01-05 17:00:22.777 parsl.addresses:65 Rank:0 [DEBUG]  Address found: cri16cn002
+2021-01-05 17:00:22.783 parsl:285 Rank:0 [DEBUG]  [TASK_PULL_THREAD] No incoming tasks
+2021-01-05 17:00:22.784 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:17, pending tasks:0
+2021-01-05 17:00:22.784 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 17
+2021-01-05 17:00:22.788 parsl.executors.high_throughput.executor:186 Rank:0 [DEBUG]  Initializing HighThroughputExecutor
+2021-01-05 17:00:22.789 parsl.addresses:63 Rank:0 [DEBUG]  Finding address by using local hostname
+2021-01-05 17:00:22.789 parsl.addresses:65 Rank:0 [DEBUG]  Address found: cri16cn002
+2021-01-05 17:00:22.791 parsl.executors.high_throughput.executor:186 Rank:0 [DEBUG]  Initializing HighThroughputExecutor
+2021-01-05 17:00:22.792 parsl.addresses:63 Rank:0 [DEBUG]  Finding address by using local hostname
+2021-01-05 17:00:22.792 parsl.addresses:65 Rank:0 [DEBUG]  Address found: cri16cn002
+2021-01-05 17:00:22.795 parsl.executors.high_throughput.executor:186 Rank:0 [DEBUG]  Initializing HighThroughputExecutor
+2021-01-05 17:00:22.864 parsl:285 Rank:0 [DEBUG]  [TASK_PULL_THREAD] No incoming tasks
+2021-01-05 17:00:22.864 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:27, pending tasks:0
+2021-01-05 17:00:22.865 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 27
+2021-01-05 17:00:23.025 parsl:285 Rank:0 [DEBUG]  [TASK_PULL_THREAD] No incoming tasks
+2021-01-05 17:00:23.025 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:27, pending tasks:0
+2021-01-05 17:00:23.025 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 27
+2021-01-05 17:00:23.346 parsl:285 Rank:0 [DEBUG]  [TASK_PULL_THREAD] No incoming tasks
+2021-01-05 17:00:23.346 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:27, pending tasks:0
+2021-01-05 17:00:23.346 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 27
+2021-01-05 17:00:23.986 parsl:285 Rank:0 [DEBUG]  [TASK_PULL_THREAD] No incoming tasks
+2021-01-05 17:00:23.987 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:27, pending tasks:0
+2021-01-05 17:00:23.987 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 27
+2021-01-05 17:00:25.268 parsl:285 Rank:0 [DEBUG]  [TASK_PULL_THREAD] No incoming tasks
+2021-01-05 17:00:25.269 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:28, pending tasks:0
+2021-01-05 17:00:25.269 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 28
+2021-01-05 17:00:27.832 parsl:285 Rank:0 [DEBUG]  [TASK_PULL_THREAD] No incoming tasks
+2021-01-05 17:00:27.832 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:28, pending tasks:0
+2021-01-05 17:00:27.832 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 28
+2021-01-05 17:00:32.958 parsl:285 Rank:0 [DEBUG]  [TASK_PULL_THREAD] No incoming tasks
+2021-01-05 17:00:32.958 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:28, pending tasks:0
+2021-01-05 17:00:32.958 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 28
+2021-01-05 17:00:43.208 parsl:285 Rank:0 [DEBUG]  [TASK_PULL_THREAD] No incoming tasks
+2021-01-05 17:00:43.209 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:28, pending tasks:0
+2021-01-05 17:00:43.209 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 28
+2021-01-05 17:01:03.698 parsl:285 Rank:0 [DEBUG]  [TASK_PULL_THREAD] No incoming tasks
+2021-01-05 17:01:03.699 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:28, pending tasks:0
+2021-01-05 17:01:03.699 parsl:217 Rank:0 [DEBUG]  Return from heartbeat: None
+2021-01-05 17:01:03.699 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 28
+2021-01-05 17:01:03.701 parsl:272 Rank:0 [DEBUG]  Got heartbeat from interchange
+2021-01-05 17:01:03.701 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:28, pending tasks:0
+2021-01-05 17:01:03.701 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 28
+2021-01-05 17:01:03.701 parsl:285 Rank:0 [DEBUG]  [TASK_PULL_THREAD] No incoming tasks
+2021-01-05 17:01:03.702 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:28, pending tasks:0
+2021-01-05 17:01:03.702 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 28
+2021-01-05 17:01:03.722 parsl:285 Rank:0 [DEBUG]  [TASK_PULL_THREAD] No incoming tasks
+2021-01-05 17:01:03.722 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:28, pending tasks:0
+2021-01-05 17:01:03.723 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 28
+2021-01-05 17:01:03.763 parsl:285 Rank:0 [DEBUG]  [TASK_PULL_THREAD] No incoming tasks
+2021-01-05 17:01:03.763 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:28, pending tasks:0
+2021-01-05 17:01:03.763 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 28
+2021-01-05 17:01:03.844 parsl:285 Rank:0 [DEBUG]  [TASK_PULL_THREAD] No incoming tasks
+2021-01-05 17:01:03.844 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:28, pending tasks:0
+2021-01-05 17:01:03.844 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 28
+2021-01-05 17:01:04.005 parsl:285 Rank:0 [DEBUG]  [TASK_PULL_THREAD] No incoming tasks
+2021-01-05 17:01:04.005 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:28, pending tasks:0
+2021-01-05 17:01:04.005 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 28
+2021-01-05 17:01:04.326 parsl:285 Rank:0 [DEBUG]  [TASK_PULL_THREAD] No incoming tasks
+2021-01-05 17:01:04.326 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:28, pending tasks:0
+2021-01-05 17:01:04.326 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 28
+2021-01-05 17:01:04.967 parsl:285 Rank:0 [DEBUG]  [TASK_PULL_THREAD] No incoming tasks
+2021-01-05 17:01:04.968 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:28, pending tasks:0
+2021-01-05 17:01:04.968 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 28
+2021-01-05 17:01:06.249 parsl:285 Rank:0 [DEBUG]  [TASK_PULL_THREAD] No incoming tasks
+2021-01-05 17:01:06.250 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:28, pending tasks:0
+2021-01-05 17:01:06.250 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 28
+2021-01-05 17:01:08.813 parsl:285 Rank:0 [DEBUG]  [TASK_PULL_THREAD] No incoming tasks
+2021-01-05 17:01:08.813 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:28, pending tasks:0
+2021-01-05 17:01:08.813 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 28
+2021-01-05 17:01:13.934 parsl:285 Rank:0 [DEBUG]  [TASK_PULL_THREAD] No incoming tasks
+2021-01-05 17:01:13.934 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:28, pending tasks:0
+2021-01-05 17:01:13.935 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 28
+2021-01-05 17:01:24.185 parsl:285 Rank:0 [DEBUG]  [TASK_PULL_THREAD] No incoming tasks
+2021-01-05 17:01:24.185 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:28, pending tasks:0
+2021-01-05 17:01:24.186 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 28
+2021-01-05 17:01:44.687 parsl:285 Rank:0 [DEBUG]  [TASK_PULL_THREAD] No incoming tasks
+2021-01-05 17:01:44.687 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:28, pending tasks:0
+2021-01-05 17:01:44.687 parsl:217 Rank:0 [DEBUG]  Return from heartbeat: None
+2021-01-05 17:01:44.687 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 28
+2021-01-05 17:01:44.689 parsl:272 Rank:0 [DEBUG]  Got heartbeat from interchange
+2021-01-05 17:01:44.689 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:28, pending tasks:0
+2021-01-05 17:01:44.689 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 28
+2021-01-05 17:01:44.690 parsl:285 Rank:0 [DEBUG]  [TASK_PULL_THREAD] No incoming tasks
+2021-01-05 17:01:44.690 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:28, pending tasks:0
+2021-01-05 17:01:44.690 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 28
+2021-01-05 17:01:44.710 parsl:285 Rank:0 [DEBUG]  [TASK_PULL_THREAD] No incoming tasks
+2021-01-05 17:01:44.711 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:28, pending tasks:0
+2021-01-05 17:01:44.711 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 28
+2021-01-05 17:01:44.751 parsl:285 Rank:0 [DEBUG]  [TASK_PULL_THREAD] No incoming tasks
+2021-01-05 17:01:44.751 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:28, pending tasks:0
+2021-01-05 17:01:44.752 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 28
+2021-01-05 17:01:44.832 parsl:285 Rank:0 [DEBUG]  [TASK_PULL_THREAD] No incoming tasks
+2021-01-05 17:01:44.832 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:28, pending tasks:0
+2021-01-05 17:01:44.833 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 28
+2021-01-05 17:01:44.993 parsl:285 Rank:0 [DEBUG]  [TASK_PULL_THREAD] No incoming tasks
+2021-01-05 17:01:44.993 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:28, pending tasks:0
+2021-01-05 17:01:44.993 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 28
+2021-01-05 17:01:45.314 parsl:285 Rank:0 [DEBUG]  [TASK_PULL_THREAD] No incoming tasks
+2021-01-05 17:01:45.314 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:28, pending tasks:0
+2021-01-05 17:01:45.315 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 28
+2021-01-05 17:01:45.955 parsl:285 Rank:0 [DEBUG]  [TASK_PULL_THREAD] No incoming tasks
+2021-01-05 17:01:45.956 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:28, pending tasks:0
+2021-01-05 17:01:45.956 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 28
+2021-01-05 17:01:47.238 parsl:285 Rank:0 [DEBUG]  [TASK_PULL_THREAD] No incoming tasks
+2021-01-05 17:01:47.238 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:28, pending tasks:0
+2021-01-05 17:01:47.238 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 28
+2021-01-05 17:01:49.801 parsl:285 Rank:0 [DEBUG]  [TASK_PULL_THREAD] No incoming tasks
+2021-01-05 17:01:49.801 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:28, pending tasks:0
+2021-01-05 17:01:49.802 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 28
+2021-01-05 17:01:54.927 parsl:285 Rank:0 [DEBUG]  [TASK_PULL_THREAD] No incoming tasks
+2021-01-05 17:01:54.927 parsl:246 Rank:0 [DEBUG]  [TASK_PULL_THREAD] ready workers:28, pending tasks:0
+2021-01-05 17:01:54.927 parsl:254 Rank:0 [DEBUG]  [TASK_PULL_THREAD] Requesting tasks: 28

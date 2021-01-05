@@ -1,0 +1,40 @@
+PLINK v2.00a2 AVX2 (25 Jun 2018)               www.cog-genomics.org/plink/2.0/
+(C) 2005-2018 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to ../input/processed_geno_train/bbf_genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.log.
+Options in effect:
+  --geno 0.05
+  --import-dosage ../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz noheader ref-first chr-col-num=2 pos-col-num=3 format=1 skip1=2
+  --import-dosage-certainty 0.1
+  --make-bed
+  --out ../input/processed_geno_train/bbf_genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01
+  --psam ../input/geno_train/RAGOC.chr1_22.train.fam
+
+Start time: Tue Jan  5 17:00:22 2021
+128946 MiB RAM detected; reserving 64473 MiB for main workspace.
+Using up to 28 threads (change this with --threads).
+--import-dosage: 1k variants scanned.--import-dosage: 1461 variants scanned.
+--import-dosage: 1k variants converted.--import-dosage:
+../input/processed_geno_train/bbf_genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01-temporary.pgen
++
+../input/processed_geno_train/bbf_genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01-temporary.pvar
++
+../input/processed_geno_train/bbf_genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01-temporary.psam
+written.
+13598 samples (13598 females, 0 males; 13598 founders) loaded from
+../input/processed_geno_train/bbf_genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01-temporary.psam.
+1461 variants loaded from
+../input/processed_geno_train/bbf_genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01-temporary.pvar.
+1 binary phenotype loaded (6533 cases, 7065 controls).
+Calculating allele frequencies... 0%done.
+--geno: 439 variants removed due to missing genotype data.
+1022 variants remaining after main filters.
+Writing
+../input/processed_geno_train/bbf_genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.bed
+... 0%done.
+Writing
+../input/processed_geno_train/bbf_genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.bim
+... done.
+Writing
+../input/processed_geno_train/bbf_genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.fam
+... done.
+End time: Tue Jan  5 17:00:23 2021

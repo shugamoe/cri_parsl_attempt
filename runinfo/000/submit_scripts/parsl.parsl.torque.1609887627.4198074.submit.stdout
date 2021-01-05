@@ -1,0 +1,26 @@
+
+
+
+
+/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl
+1.0.0
+Found cores : 28
+Launching worker: 1
+
+
+------------ Job WrapUp ------------
+
+Job ID:            27444749.cri16sc001
+User ID:           jmcclellan
+Job Name:          parsl.parsl.torque.1609887627.4198074
+Queue Name:        express
+Working Directory: /gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl
+Resource List:     mem=2gb,walltime=01:00:00,nodes=1:ppn=1,neednodes=1:ppn=1
+Resources Used:    cput=00:00:07,vmem=0kb,walltime=00:00:08,mem=0kb,energy_used=0
+Exit Code:         271
+Mother Superior:   cri16cn001
+
+Execution Nodes: 
+cri16cn001
+
+

@@ -1,0 +1,5 @@
+--> executable follows <--
+
+    plink2 --fam ../input/geno_train/RAGOC.chr1_22.train.fam       --import-dosage ../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz noheader ref-first chr-col-num=2 pos-col-num=3 format=1 skip1=2       --import-dosage-certainty 0.1       --make-bed       --geno 0.05       --out ../input/processed_geno_train/bbf_genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01
+    
+--> end executable <--

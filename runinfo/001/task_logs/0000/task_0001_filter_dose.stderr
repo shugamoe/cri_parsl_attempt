@@ -1,0 +1,5 @@
+--> executable follows <--
+
+    python3 /gpfs/data/gao-lab/Julian/gaolab_hub/apps/ragoc_to_ldpred2/ragoc_to_ldpred2.py geno       --idir "../input/geno_train"       --ipat "RAGOC.MAF005R7.chr22.p1.train.gz"       --osnp "None"       --ogeno "../input/processed_geno_train/genotype"       --source "train"       --gwas "../input/gwas_combined/RAGOC.MAF005R7.overall.train.chr22.logistic.gz"       --pval "0.2"       --avginfscore "0.9"       --maf "0.01"       --filter-only
+    
+--> end executable <--

@@ -14,13 +14,14 @@ In `runinfo.1_at_a_time_cached_.2_at_once_finds_cache` there are 3 runs.
  * 002
    * This attempts to filter both of the files from runs 000 and 001 at once.
    * Since the results from 000 and 001 are cached, this completes successfully.  
+   * Corresponds to line  36 in `run.py`
      
 
 In `runinfo.2_at_once_without_cache_does_not_work` there is a single run
  * 000
    * This attempts to filter both of the files as in run 002 above, but this
      time without any cached results to fall back on.
-   * Corresponds to line  36 in `run.py`
+   * Also corresponds to line  36 in `run.py`
    * Tasks are submitted succesfully and looking at `parsl.log`, workers appear
      to be connected.
    * Memoization hashes are exactly the same as well, but even after ~ 30

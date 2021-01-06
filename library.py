@@ -5,7 +5,7 @@ from parsl.app.app import bash_app
 from config import id_for_memo_File
 import parsl
 
-@bash_app(executors=["standard_16gb_1core"], cache=False, ignore_for_cache=["stdout", "stderr"])
+@bash_app(executors=["standard_16gb_1core"], cache=True, ignore_for_cache=["stdout", "stderr"])
 def filter_dose(ogeno, source, pval, avginfscore, maf, inputs=[], outputs=[],
                 stdout=parsl.AUTO_LOGNAME, stderr=parsl.AUTO_LOGNAME):
     import os

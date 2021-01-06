@@ -14,6 +14,7 @@ from parsl.dataflow.memoization import id_for_memo
 
 
 sbayesr_config = Config(
+    usage_tracking = True,
     checkpoint_mode = "task_exit",
     checkpoint_files = get_all_checkpoints(),
     executors=[
@@ -31,7 +32,7 @@ sbayesr_config = Config(
                             "python3 -c 'import parsl; print(parsl.__version__)'; "
                             "export PATH=~/.local/bin:$PATH; "
                             "export PYTHONPATH='{0}:{{PYTHONPATH}}'").format(os.getcwd()),
-                walltime="6:00:00",
+                walltime="1:00:00",
                 scheduler_options="#PBS -l mem=16gb",
                 init_blocks=1,
                 min_blocks=0,

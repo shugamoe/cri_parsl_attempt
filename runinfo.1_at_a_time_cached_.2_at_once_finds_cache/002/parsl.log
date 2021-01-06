@@ -1,0 +1,303 @@
+2021-01-06 10:04:15.658 parsl.dataflow.dflow:82 [DEBUG]  Starting DataFlowKernel with config
+Config(
+    app_cache=True, 
+    checkpoint_files=['/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl/runinfo/000/checkpoint', '/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl/runinfo/001/checkpoint'], 
+    checkpoint_mode='task_exit', 
+    checkpoint_period=None, 
+    data_management_max_threads=10, 
+    executors=[HighThroughputExecutor(
+        address='cri16in001', 
+        address_probe_timeout=None, 
+        cores_per_worker=1, 
+        heartbeat_period=30, 
+        heartbeat_threshold=120, 
+        interchange_port_range=(55000, 56000), 
+        label='standard_16gb_1core', 
+        launch_cmd='process_worker_pool.py {debug} {max_workers} -a {addresses} -p {prefetch_capacity} -c {cores_per_worker} -m {mem_per_worker} --poll {poll_period} --task_port={task_port} --result_port={result_port} --logdir={logdir} --block_id={{block_id}} --hb_period={heartbeat_period} {address_probe_timeout_string} --hb_threshold={heartbeat_threshold} ', 
+        managed=True, 
+        max_workers=inf, 
+        mem_per_worker=None, 
+        poll_period=10, 
+        prefetch_capacity=0, 
+        provider=TorqueProvider(
+            account=None, 
+            channel=LocalChannel(
+                envs={}, 
+                script_dir=None, 
+                userhome='/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl'
+            ), 
+            cmd_timeout=120, 
+            init_blocks=1, 
+            launcher=SingleNodeLauncher(), 
+            max_blocks=30, 
+            min_blocks=0, 
+            nodes_per_block=1, 
+            parallelism=1, 
+            queue=None, 
+            scheduler_options='#PBS -l mem=16gb', 
+            walltime='1:00:00', 
+            worker_init="module load gcc/6.2.0; module load plink/2.0; cd /gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl; pwd; module load python/3.8.1; python3 -c 'import parsl; print(parsl.__version__)'; export PATH=~/.local/bin:$PATH; export PYTHONPATH='/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl:{PYTHONPATH}'"
+        ), 
+        storage_access=None, 
+        worker_debug=False, 
+        worker_logdir_root=None, 
+        worker_port_range=(54000, 55000), 
+        worker_ports=None, 
+        working_dir=None
+    ), HighThroughputExecutor(
+        address='cri16in001', 
+        address_probe_timeout=None, 
+        cores_per_worker=1, 
+        heartbeat_period=30, 
+        heartbeat_threshold=120, 
+        interchange_port_range=(55000, 56000), 
+        label='plink2_express_2gb_1core', 
+        launch_cmd='process_worker_pool.py {debug} {max_workers} -a {addresses} -p {prefetch_capacity} -c {cores_per_worker} -m {mem_per_worker} --poll {poll_period} --task_port={task_port} --result_port={result_port} --logdir={logdir} --block_id={{block_id}} --hb_period={heartbeat_period} {address_probe_timeout_string} --hb_threshold={heartbeat_threshold} ', 
+        managed=True, 
+        max_workers=inf, 
+        mem_per_worker=None, 
+        poll_period=10, 
+        prefetch_capacity=0, 
+        provider=TorqueProvider(
+            account=None, 
+            channel=LocalChannel(
+                envs={}, 
+                script_dir=None, 
+                userhome='/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl'
+            ), 
+            cmd_timeout=120, 
+            init_blocks=0, 
+            launcher=SingleNodeLauncher(), 
+            max_blocks=45, 
+            min_blocks=0, 
+            nodes_per_block=1, 
+            parallelism=1, 
+            queue=None, 
+            scheduler_options='#PBS -l mem=2gb', 
+            walltime='01:00:00', 
+            worker_init="module load gcc/6.2.0; module load plink/2.0; cd /gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl; pwd; module load python/3.8.1; python3 -c 'import parsl; print(parsl.__version__)'; export PATH=~/.local/bin:$PATH; export PYTHONPATH='/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl:{PYTHONPATH}'"
+        ), 
+        storage_access=None, 
+        worker_debug=True, 
+        worker_logdir_root=None, 
+        worker_port_range=(54000, 55000), 
+        worker_ports=None, 
+        working_dir=None
+    ), HighThroughputExecutor(
+        address='cri16in001', 
+        address_probe_timeout=None, 
+        cores_per_worker=1, 
+        heartbeat_period=30, 
+        heartbeat_threshold=120, 
+        interchange_port_range=(55000, 56000), 
+        label='plink1_express_2gb_1core', 
+        launch_cmd='process_worker_pool.py {debug} {max_workers} -a {addresses} -p {prefetch_capacity} -c {cores_per_worker} -m {mem_per_worker} --poll {poll_period} --task_port={task_port} --result_port={result_port} --logdir={logdir} --block_id={{block_id}} --hb_period={heartbeat_period} {address_probe_timeout_string} --hb_threshold={heartbeat_threshold} ', 
+        managed=True, 
+        max_workers=inf, 
+        mem_per_worker=None, 
+        poll_period=10, 
+        prefetch_capacity=0, 
+        provider=TorqueProvider(
+            account=None, 
+            channel=LocalChannel(
+                envs={}, 
+                script_dir=None, 
+                userhome='/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl'
+            ), 
+            cmd_timeout=120, 
+            init_blocks=0, 
+            launcher=SingleNodeLauncher(), 
+            max_blocks=45, 
+            min_blocks=0, 
+            nodes_per_block=1, 
+            parallelism=1, 
+            queue=None, 
+            scheduler_options='#PBS -l mem=2gb', 
+            walltime='01:00:00', 
+            worker_init="module load gcc/6.2.0; module load plink/1.90; cd /gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl; pwd; module load python/3.8.1; python3 -c 'import parsl; print(parsl.__version__)'; export PATH=~/.local/bin:$PATH; export PYTHONPATH='/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl:{PYTHONPATH}'"
+        ), 
+        storage_access=None, 
+        worker_debug=True, 
+        worker_logdir_root=None, 
+        worker_port_range=(54000, 55000), 
+        worker_ports=None, 
+        working_dir=None
+    )], 
+    initialize_logging=True, 
+    max_idletime=120.0, 
+    monitoring=None, 
+    retries=0, 
+    run_dir='runinfo', 
+    strategy='simple', 
+    usage_tracking=True
+)
+2021-01-06 10:04:15.660 parsl.dataflow.dflow:87 [INFO]  Parsl version: 1.0.0
+2021-01-06 10:04:15.660 parsl.dataflow.usage_tracking.usage:126 [DEBUG]  Tracking status: True
+2021-01-06 10:04:15.668 parsl.dataflow.dflow:114 [INFO]  Run id is: 82316bb8-db27-4a47-a549-a92632844942
+2021-01-06 10:04:16.062 parsl.dataflow.dflow:1063 [INFO]  Loading checkpoints from /gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl/runinfo/000/checkpoint
+2021-01-06 10:04:16.064 parsl.dataflow.dflow:1092 [INFO]  Completed loading checkpoint: /gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl/runinfo/000/checkpoint/tasks.pkl with 1 tasks
+2021-01-06 10:04:16.064 parsl.dataflow.dflow:1063 [INFO]  Loading checkpoints from /gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl/runinfo/001/checkpoint
+2021-01-06 10:04:16.067 parsl.dataflow.dflow:1092 [INFO]  Completed loading checkpoint: /gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl/runinfo/001/checkpoint/tasks.pkl with 2 tasks
+2021-01-06 10:04:16.067 parsl.dataflow.memoization:128 [INFO]  App caching initialized
+2021-01-06 10:04:16.067 parsl.dataflow.strategy:128 [DEBUG]  Scaling strategy: simple
+2021-01-06 10:04:16.072 parsl.executors.high_throughput.executor:457 [DEBUG]  Starting queue management thread
+2021-01-06 10:04:16.072 parsl.executors.high_throughput.executor:341 [DEBUG]  [MTHREAD] queue management worker starting
+2021-01-06 10:04:16.072 parsl.executors.high_throughput.executor:461 [DEBUG]  Started queue management thread
+2021-01-06 10:04:16.098 parsl.executors.high_throughput.executor:304 [DEBUG]  Created management thread: <Thread(HTEX-Queue-Management-Thread, started daemon 140069769815808)>
+2021-01-06 10:04:16.099 parsl.executors.high_throughput.executor:280 [DEBUG]  Launch command: process_worker_pool.py   -a cri16in001 -p 0 -c 1 -m None --poll 10 --task_port=54106 --result_port=54392 --logdir=/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl/runinfo/002/standard_16gb_1core --block_id={block_id} --hb_period=30  --hb_threshold=120 
+2021-01-06 10:04:16.099 parsl.executors.high_throughput.executor:283 [DEBUG]  Starting HighThroughputExecutor with provider:
+TorqueProvider(
+    account=None, 
+    channel=LocalChannel(
+        envs={}, 
+        script_dir='/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl/runinfo/002/submit_scripts', 
+        userhome='/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl'
+    ), 
+    cmd_timeout=120, 
+    init_blocks=1, 
+    launcher=SingleNodeLauncher(), 
+    max_blocks=30, 
+    min_blocks=0, 
+    nodes_per_block=1, 
+    parallelism=1, 
+    queue=None, 
+    scheduler_options='#PBS -l mem=16gb', 
+    walltime='1:00:00', 
+    worker_init="module load gcc/6.2.0; module load plink/2.0; cd /gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl; pwd; module load python/3.8.1; python3 -c 'import parsl; print(parsl.__version__)'; export PATH=~/.local/bin:$PATH; export PYTHONPATH='/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl:{PYTHONPATH}'"
+)
+2021-01-06 10:04:16.110 parsl.providers.torque.torque:177 [DEBUG]  Requesting nodes_per_block:1 tasks_per_node:1
+2021-01-06 10:04:16.111 parsl.providers.torque.torque:197 [DEBUG]  Writing submit script
+2021-01-06 10:04:16.201 parsl.executors.high_throughput.executor:581 [DEBUG]  Launched block 0->27466624.cri16sc001
+2021-01-06 10:04:16.204 parsl.executors.high_throughput.executor:457 [DEBUG]  Starting queue management thread
+2021-01-06 10:04:16.205 parsl.executors.high_throughput.executor:341 [DEBUG]  [MTHREAD] queue management worker starting
+2021-01-06 10:04:16.205 parsl.executors.high_throughput.executor:461 [DEBUG]  Started queue management thread
+2021-01-06 10:04:16.232 parsl.executors.high_throughput.executor:304 [DEBUG]  Created management thread: <Thread(HTEX-Queue-Management-Thread, started daemon 140069218285312)>
+2021-01-06 10:04:16.233 parsl.executors.high_throughput.executor:280 [DEBUG]  Launch command: process_worker_pool.py --debug  -a cri16in001 -p 0 -c 1 -m None --poll 10 --task_port=54540 --result_port=54880 --logdir=/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl/runinfo/002/plink2_express_2gb_1core --block_id={block_id} --hb_period=30  --hb_threshold=120 
+2021-01-06 10:04:16.233 parsl.executors.high_throughput.executor:283 [DEBUG]  Starting HighThroughputExecutor with provider:
+TorqueProvider(
+    account=None, 
+    channel=LocalChannel(
+        envs={}, 
+        script_dir='/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl/runinfo/002/submit_scripts', 
+        userhome='/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl'
+    ), 
+    cmd_timeout=120, 
+    init_blocks=0, 
+    launcher=SingleNodeLauncher(), 
+    max_blocks=45, 
+    min_blocks=0, 
+    nodes_per_block=1, 
+    parallelism=1, 
+    queue=None, 
+    scheduler_options='#PBS -l mem=2gb', 
+    walltime='01:00:00', 
+    worker_init="module load gcc/6.2.0; module load plink/2.0; cd /gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl; pwd; module load python/3.8.1; python3 -c 'import parsl; print(parsl.__version__)'; export PATH=~/.local/bin:$PATH; export PYTHONPATH='/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl:{PYTHONPATH}'"
+)
+2021-01-06 10:04:16.251 parsl.executors.high_throughput.executor:457 [DEBUG]  Starting queue management thread
+2021-01-06 10:04:16.251 parsl.executors.high_throughput.executor:341 [DEBUG]  [MTHREAD] queue management worker starting
+2021-01-06 10:04:16.251 parsl.executors.high_throughput.executor:461 [DEBUG]  Started queue management thread
+2021-01-06 10:04:16.273 parsl.executors.high_throughput.executor:304 [DEBUG]  Created management thread: <Thread(HTEX-Queue-Management-Thread, started daemon 140068939360000)>
+2021-01-06 10:04:16.274 parsl.executors.high_throughput.executor:280 [DEBUG]  Launch command: process_worker_pool.py --debug  -a cri16in001 -p 0 -c 1 -m None --poll 10 --task_port=54182 --result_port=54872 --logdir=/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl/runinfo/002/plink1_express_2gb_1core --block_id={block_id} --hb_period=30  --hb_threshold=120 
+2021-01-06 10:04:16.274 parsl.executors.high_throughput.executor:283 [DEBUG]  Starting HighThroughputExecutor with provider:
+TorqueProvider(
+    account=None, 
+    channel=LocalChannel(
+        envs={}, 
+        script_dir='/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl/runinfo/002/submit_scripts', 
+        userhome='/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl'
+    ), 
+    cmd_timeout=120, 
+    init_blocks=0, 
+    launcher=SingleNodeLauncher(), 
+    max_blocks=45, 
+    min_blocks=0, 
+    nodes_per_block=1, 
+    parallelism=1, 
+    queue=None, 
+    scheduler_options='#PBS -l mem=2gb', 
+    walltime='01:00:00', 
+    worker_init="module load gcc/6.2.0; module load plink/1.90; cd /gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl; pwd; module load python/3.8.1; python3 -c 'import parsl; print(parsl.__version__)'; export PATH=~/.local/bin:$PATH; export PYTHONPATH='/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl:{PYTHONPATH}'"
+)
+2021-01-06 10:04:16.291 parsl.dataflow.task_status_poller:74 [DEBUG]  Adding executor standard_16gb_1core
+2021-01-06 10:04:16.291 parsl.dataflow.task_status_poller:74 [DEBUG]  Adding executor plink2_express_2gb_1core
+2021-01-06 10:04:16.291 parsl.dataflow.task_status_poller:74 [DEBUG]  Adding executor plink1_express_2gb_1core
+2021-01-06 10:04:16.299 parsl.data_provider.files:54 [DEBUG]  Making clean copy of File object <<class 'parsl.data_provider.files.File'> at 0x7f6490868e10 url=../input/geno_train/RAGOC.MAF005R7.chr22.p2.train.gz scheme=file netloc= path=../input/geno_train/RAGOC.MAF005R7.chr22.p2.train.gz filename=RAGOC.MAF005R7.chr22.p2.train.gz>
+2021-01-06 10:04:16.300 parsl.data_provider.data_manager:128 [DEBUG]  stage_in checking Staging provider NoOpFileStaging()
+2021-01-06 10:04:16.300 parsl.data_provider.file_noop:13 [DEBUG]  NoOpFileStaging checking file <<class 'parsl.data_provider.files.File'> at 0x7f6490881320 url=../input/geno_train/RAGOC.MAF005R7.chr22.p2.train.gz scheme=file netloc= path=../input/geno_train/RAGOC.MAF005R7.chr22.p2.train.gz filename=RAGOC.MAF005R7.chr22.p2.train.gz>
+2021-01-06 10:04:16.301 parsl.data_provider.data_manager:87 [DEBUG]  stage_in checking Staging provider NoOpFileStaging()
+2021-01-06 10:04:16.301 parsl.data_provider.file_noop:13 [DEBUG]  NoOpFileStaging checking file <<class 'parsl.data_provider.files.File'> at 0x7f6490881320 url=../input/geno_train/RAGOC.MAF005R7.chr22.p2.train.gz scheme=file netloc= path=../input/geno_train/RAGOC.MAF005R7.chr22.p2.train.gz filename=RAGOC.MAF005R7.chr22.p2.train.gz>
+2021-01-06 10:04:16.301 parsl.data_provider.files:54 [DEBUG]  Making clean copy of File object <<class 'parsl.data_provider.files.File'> at 0x7f6490868f00 url=../input/gwas_combined/RAGOC.MAF005R7.overall.train.chr22.logistic.gz scheme=file netloc= path=../input/gwas_combined/RAGOC.MAF005R7.overall.train.chr22.logistic.gz filename=RAGOC.MAF005R7.overall.train.chr22.logistic.gz>
+2021-01-06 10:04:16.302 parsl.data_provider.data_manager:128 [DEBUG]  stage_in checking Staging provider NoOpFileStaging()
+2021-01-06 10:04:16.302 parsl.data_provider.file_noop:13 [DEBUG]  NoOpFileStaging checking file <<class 'parsl.data_provider.files.File'> at 0x7f6490881370 url=../input/gwas_combined/RAGOC.MAF005R7.overall.train.chr22.logistic.gz scheme=file netloc= path=../input/gwas_combined/RAGOC.MAF005R7.overall.train.chr22.logistic.gz filename=RAGOC.MAF005R7.overall.train.chr22.logistic.gz>
+2021-01-06 10:04:16.303 parsl.data_provider.data_manager:87 [DEBUG]  stage_in checking Staging provider NoOpFileStaging()
+2021-01-06 10:04:16.303 parsl.data_provider.file_noop:13 [DEBUG]  NoOpFileStaging checking file <<class 'parsl.data_provider.files.File'> at 0x7f6490881370 url=../input/gwas_combined/RAGOC.MAF005R7.overall.train.chr22.logistic.gz scheme=file netloc= path=../input/gwas_combined/RAGOC.MAF005R7.overall.train.chr22.logistic.gz filename=RAGOC.MAF005R7.overall.train.chr22.logistic.gz>
+2021-01-06 10:04:16.303 parsl.dataflow.dflow:533 [DEBUG]  Adding output dependencies
+2021-01-06 10:04:16.303 parsl.data_provider.files:54 [DEBUG]  Making clean copy of File object <<class 'parsl.data_provider.files.File'> at 0x7f6490868eb0 url=../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p2.train.pval0.2_avginfscore0.9_maf0.01.gz scheme=file netloc= path=../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p2.train.pval0.2_avginfscore0.9_maf0.01.gz filename=RAGOC.MAF005R7.chr22.p2.train.pval0.2_avginfscore0.9_maf0.01.gz>
+2021-01-06 10:04:16.304 parsl.dataflow.dflow:547 [DEBUG]  Submitting stage out for output file <<class 'parsl.data_provider.files.File'> at 0x7f6490868eb0 url=../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p2.train.pval0.2_avginfscore0.9_maf0.01.gz scheme=file netloc= path=../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p2.train.pval0.2_avginfscore0.9_maf0.01.gz filename=RAGOC.MAF005R7.chr22.p2.train.pval0.2_avginfscore0.9_maf0.01.gz>
+2021-01-06 10:04:16.304 parsl.data_provider.data_manager:160 [DEBUG]  stage_out checking Staging provider NoOpFileStaging()
+2021-01-06 10:04:16.304 parsl.data_provider.file_noop:17 [DEBUG]  NoOpFileStaging checking file <<class 'parsl.data_provider.files.File'> at 0x7f64908815f0 url=../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p2.train.pval0.2_avginfscore0.9_maf0.01.gz scheme=file netloc= path=../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p2.train.pval0.2_avginfscore0.9_maf0.01.gz filename=RAGOC.MAF005R7.chr22.p2.train.pval0.2_avginfscore0.9_maf0.01.gz>
+2021-01-06 10:04:16.305 parsl.dataflow.dflow:553 [DEBUG]  No stageout dependency for <<class 'parsl.data_provider.files.File'> at 0x7f6490868eb0 url=../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p2.train.pval0.2_avginfscore0.9_maf0.01.gz scheme=file netloc= path=../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p2.train.pval0.2_avginfscore0.9_maf0.01.gz filename=RAGOC.MAF005R7.chr22.p2.train.pval0.2_avginfscore0.9_maf0.01.gz>
+2021-01-06 10:04:16.305 parsl.app.futures:71 [DEBUG]  Creating DataFuture with parent: <AppFuture super=<AppFuture at 0x7f6490881050 state=pending>> and file: <<class 'parsl.data_provider.files.File'> at 0x7f6490868eb0 url=../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p2.train.pval0.2_avginfscore0.9_maf0.01.gz scheme=file netloc= path=../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p2.train.pval0.2_avginfscore0.9_maf0.01.gz filename=RAGOC.MAF005R7.chr22.p2.train.pval0.2_avginfscore0.9_maf0.01.gz>
+2021-01-06 10:04:16.306 parsl.data_provider.data_manager:46 [DEBUG]  stage_out checking Staging provider NoOpFileStaging()
+2021-01-06 10:04:16.306 parsl.data_provider.file_noop:17 [DEBUG]  NoOpFileStaging checking file <<class 'parsl.data_provider.files.File'> at 0x7f64908815f0 url=../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p2.train.pval0.2_avginfscore0.9_maf0.01.gz scheme=file netloc= path=../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p2.train.pval0.2_avginfscore0.9_maf0.01.gz filename=RAGOC.MAF005R7.chr22.p2.train.pval0.2_avginfscore0.9_maf0.01.gz>
+2021-01-06 10:04:16.306 parsl.dataflow.dflow:772 [INFO]  Task 0 submitted for App filter_dose, not waiting on any dependency
+2021-01-06 10:04:16.306 parsl.dataflow.dflow:780 [DEBUG]  Task 0 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7f6490881050 state=pending>>
+2021-01-06 10:04:16.306 parsl.dataflow.memoization:159 [DEBUG]  Ignoring these kwargs for checkpointing: ['stdout', 'stderr']
+2021-01-06 10:04:16.307 parsl.dataflow.memoization:161 [DEBUG]  Ignoring kwarg stdout
+2021-01-06 10:04:16.307 parsl.dataflow.memoization:161 [DEBUG]  Ignoring kwarg stderr
+2021-01-06 10:04:16.714 parsl.dataflow.memoization:200 [DEBUG]  Task 0 has memoization hash 47a423c6e71c58eef057a2d95cb7522a
+2021-01-06 10:04:16.715 parsl.dataflow.memoization:204 [INFO]  Task 0 using result from cache
+2021-01-06 10:04:16.715 parsl.dataflow.dflow:473 [INFO]  Reusing cached result for task 0
+2021-01-06 10:04:16.715 parsl.dataflow.dflow:289 [INFO]  Task 0 completed
+2021-01-06 10:04:16.715 parsl.dataflow.dflow:293 [INFO]  Standard output for task 0 available at /gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl/runinfo/002/task_logs/0000/task_0000_filter_dose.stdout
+2021-01-06 10:04:16.715 parsl.dataflow.dflow:295 [INFO]  Standard error for task 0 available at /gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl/runinfo/002/task_logs/0000/task_0000_filter_dose.stderr
+2021-01-06 10:04:16.716 parsl.dataflow.memoization:241 [INFO]  Updating app cache entry with latest filter_dose:0 call
+2021-01-06 10:04:16.720 parsl.dataflow.dflow:1030 [DEBUG]  Task 0 checkpointed
+2021-01-06 10:04:16.721 parsl.dataflow.dflow:1040 [INFO]  Done checkpointing 1 tasks
+2021-01-06 10:04:16.721 parsl.data_provider.files:54 [DEBUG]  Making clean copy of File object <<class 'parsl.data_provider.files.File'> at 0x7f6490868fa0 url=../input/geno_train/RAGOC.MAF005R7.chr22.p1.train.gz scheme=file netloc= path=../input/geno_train/RAGOC.MAF005R7.chr22.p1.train.gz filename=RAGOC.MAF005R7.chr22.p1.train.gz>
+2021-01-06 10:04:16.722 parsl.data_provider.data_manager:128 [DEBUG]  stage_in checking Staging provider NoOpFileStaging()
+2021-01-06 10:04:16.723 parsl.data_provider.file_noop:13 [DEBUG]  NoOpFileStaging checking file <<class 'parsl.data_provider.files.File'> at 0x7f6490881960 url=../input/geno_train/RAGOC.MAF005R7.chr22.p1.train.gz scheme=file netloc= path=../input/geno_train/RAGOC.MAF005R7.chr22.p1.train.gz filename=RAGOC.MAF005R7.chr22.p1.train.gz>
+2021-01-06 10:04:16.723 parsl.data_provider.data_manager:87 [DEBUG]  stage_in checking Staging provider NoOpFileStaging()
+2021-01-06 10:04:16.723 parsl.data_provider.file_noop:13 [DEBUG]  NoOpFileStaging checking file <<class 'parsl.data_provider.files.File'> at 0x7f6490881960 url=../input/geno_train/RAGOC.MAF005R7.chr22.p1.train.gz scheme=file netloc= path=../input/geno_train/RAGOC.MAF005R7.chr22.p1.train.gz filename=RAGOC.MAF005R7.chr22.p1.train.gz>
+2021-01-06 10:04:16.724 parsl.data_provider.files:54 [DEBUG]  Making clean copy of File object <<class 'parsl.data_provider.files.File'> at 0x7f6490868e60 url=../input/gwas_combined/RAGOC.MAF005R7.overall.train.chr22.logistic.gz scheme=file netloc= path=../input/gwas_combined/RAGOC.MAF005R7.overall.train.chr22.logistic.gz filename=RAGOC.MAF005R7.overall.train.chr22.logistic.gz>
+2021-01-06 10:04:16.724 parsl.data_provider.data_manager:128 [DEBUG]  stage_in checking Staging provider NoOpFileStaging()
+2021-01-06 10:04:16.725 parsl.data_provider.file_noop:13 [DEBUG]  NoOpFileStaging checking file <<class 'parsl.data_provider.files.File'> at 0x7f6490088410 url=../input/gwas_combined/RAGOC.MAF005R7.overall.train.chr22.logistic.gz scheme=file netloc= path=../input/gwas_combined/RAGOC.MAF005R7.overall.train.chr22.logistic.gz filename=RAGOC.MAF005R7.overall.train.chr22.logistic.gz>
+2021-01-06 10:04:16.725 parsl.data_provider.data_manager:87 [DEBUG]  stage_in checking Staging provider NoOpFileStaging()
+2021-01-06 10:04:16.725 parsl.data_provider.file_noop:13 [DEBUG]  NoOpFileStaging checking file <<class 'parsl.data_provider.files.File'> at 0x7f6490088410 url=../input/gwas_combined/RAGOC.MAF005R7.overall.train.chr22.logistic.gz scheme=file netloc= path=../input/gwas_combined/RAGOC.MAF005R7.overall.train.chr22.logistic.gz filename=RAGOC.MAF005R7.overall.train.chr22.logistic.gz>
+2021-01-06 10:04:16.726 parsl.dataflow.dflow:533 [DEBUG]  Adding output dependencies
+2021-01-06 10:04:16.726 parsl.data_provider.files:54 [DEBUG]  Making clean copy of File object <<class 'parsl.data_provider.files.File'> at 0x7f6490881190 url=../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz scheme=file netloc= path=../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz filename=RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz>
+2021-01-06 10:04:16.726 parsl.dataflow.dflow:547 [DEBUG]  Submitting stage out for output file <<class 'parsl.data_provider.files.File'> at 0x7f6490881190 url=../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz scheme=file netloc= path=../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz filename=RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz>
+2021-01-06 10:04:16.727 parsl.data_provider.data_manager:160 [DEBUG]  stage_out checking Staging provider NoOpFileStaging()
+2021-01-06 10:04:16.727 parsl.data_provider.file_noop:17 [DEBUG]  NoOpFileStaging checking file <<class 'parsl.data_provider.files.File'> at 0x7f64908871e0 url=../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz scheme=file netloc= path=../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz filename=RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz>
+2021-01-06 10:04:16.727 parsl.dataflow.dflow:553 [DEBUG]  No stageout dependency for <<class 'parsl.data_provider.files.File'> at 0x7f6490881190 url=../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz scheme=file netloc= path=../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz filename=RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz>
+2021-01-06 10:04:16.727 parsl.app.futures:71 [DEBUG]  Creating DataFuture with parent: <AppFuture super=<AppFuture at 0x7f6491cc41e0 state=pending>> and file: <<class 'parsl.data_provider.files.File'> at 0x7f6490881190 url=../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz scheme=file netloc= path=../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz filename=RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz>
+2021-01-06 10:04:16.728 parsl.data_provider.data_manager:46 [DEBUG]  stage_out checking Staging provider NoOpFileStaging()
+2021-01-06 10:04:16.728 parsl.data_provider.file_noop:17 [DEBUG]  NoOpFileStaging checking file <<class 'parsl.data_provider.files.File'> at 0x7f64908871e0 url=../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz scheme=file netloc= path=../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz filename=RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz>
+2021-01-06 10:04:16.728 parsl.dataflow.dflow:772 [INFO]  Task 1 submitted for App filter_dose, not waiting on any dependency
+2021-01-06 10:04:16.728 parsl.dataflow.dflow:780 [DEBUG]  Task 1 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7f6491cc41e0 state=pending>>
+2021-01-06 10:04:16.729 parsl.dataflow.memoization:159 [DEBUG]  Ignoring these kwargs for checkpointing: ['stdout', 'stderr']
+2021-01-06 10:04:16.729 parsl.dataflow.memoization:161 [DEBUG]  Ignoring kwarg stdout
+2021-01-06 10:04:16.729 parsl.dataflow.memoization:161 [DEBUG]  Ignoring kwarg stderr
+2021-01-06 10:04:16.730 parsl.dataflow.memoization:200 [DEBUG]  Task 1 has memoization hash 07ad077935bab8ede17ab280b1ebb596
+2021-01-06 10:04:16.730 parsl.dataflow.memoization:204 [INFO]  Task 1 using result from cache
+2021-01-06 10:04:16.730 parsl.dataflow.dflow:473 [INFO]  Reusing cached result for task 1
+2021-01-06 10:04:16.730 parsl.dataflow.dflow:289 [INFO]  Task 1 completed
+2021-01-06 10:04:16.730 parsl.dataflow.dflow:293 [INFO]  Standard output for task 1 available at /gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl/runinfo/002/task_logs/0000/task_0001_filter_dose.stdout
+2021-01-06 10:04:16.731 parsl.dataflow.dflow:295 [INFO]  Standard error for task 1 available at /gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl/runinfo/002/task_logs/0000/task_0001_filter_dose.stderr
+2021-01-06 10:04:16.731 parsl.dataflow.memoization:241 [INFO]  Updating app cache entry with latest filter_dose:1 call
+2021-01-06 10:04:16.733 parsl.dataflow.dflow:1030 [DEBUG]  Task 1 checkpointed
+2021-01-06 10:04:16.734 parsl.dataflow.dflow:1040 [INFO]  Done checkpointing 1 tasks
+2021-01-06 10:04:16.735 parsl.dataflow.dflow:913 [INFO]  DFK cleanup initiated
+2021-01-06 10:04:16.735 parsl.dataflow.dflow:816 [INFO]  Summary of tasks in DFK:
+2021-01-06 10:04:16.735 parsl.dataflow.dflow:829 [INFO]  Tasks in state States.done: 2
+2021-01-06 10:04:16.735 parsl.dataflow.dflow:835 [INFO]  End of summary
+2021-01-06 10:04:16.738 parsl.dataflow.dflow:1038 [DEBUG]  No tasks checkpointed in this pass.
+2021-01-06 10:04:16.745 parsl.dataflow.dflow:937 [INFO]  Terminating flow_control and strategy threads
+2021-01-06 10:04:16.797 parsl.executors.high_throughput.executor:642 [INFO]  Attempting HighThroughputExecutor shutdown
+2021-01-06 10:04:16.798 parsl.executors.high_throughput.executor:644 [INFO]  Finished HighThroughputExecutor shutdown attempt
+2021-01-06 10:04:16.829 parsl.executors.high_throughput.executor:642 [INFO]  Attempting HighThroughputExecutor shutdown
+2021-01-06 10:04:16.830 parsl.executors.high_throughput.executor:644 [INFO]  Finished HighThroughputExecutor shutdown attempt
+2021-01-06 10:04:16.862 parsl.executors.high_throughput.executor:642 [INFO]  Attempting HighThroughputExecutor shutdown
+2021-01-06 10:04:16.863 parsl.executors.high_throughput.executor:644 [INFO]  Finished HighThroughputExecutor shutdown attempt
+2021-01-06 10:04:16.863 parsl.executors.threads:105 [DEBUG]  Done with executor shutdown
+2021-01-06 10:04:16.863 parsl.dataflow.dflow:960 [INFO]  DFK cleanup complete

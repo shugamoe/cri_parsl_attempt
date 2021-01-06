@@ -1,0 +1,26 @@
+2021-01-06 09:52:38.380 parsl:607 Rank:0 [INFO]  Python version: 3.8.1 (default, Jan 20 2020, 04:56:27) 
+[GCC 6.2.0]
+2021-01-06 09:52:38.380 parsl:608 Rank:0 [INFO]  Debug logging: False
+2021-01-06 09:52:38.381 parsl:609 Rank:0 [INFO]  Log dir: /gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl/runinfo/001/standard_16gb_1core
+2021-01-06 09:52:38.381 parsl:610 Rank:0 [INFO]  Manager ID: 90a904919e09
+2021-01-06 09:52:38.381 parsl:611 Rank:0 [INFO]  Block ID: 0
+2021-01-06 09:52:38.381 parsl:612 Rank:0 [INFO]  cores_per_worker: 1
+2021-01-06 09:52:38.381 parsl:613 Rank:0 [INFO]  mem_per_worker: None
+2021-01-06 09:52:38.381 parsl:614 Rank:0 [INFO]  task_port: 54390
+2021-01-06 09:52:38.381 parsl:615 Rank:0 [INFO]  result_port: 54546
+2021-01-06 09:52:38.382 parsl:616 Rank:0 [INFO]  addresses: cri16in001
+2021-01-06 09:52:38.382 parsl:617 Rank:0 [INFO]  max_workers: inf
+2021-01-06 09:52:38.382 parsl:618 Rank:0 [INFO]  poll_period: 10
+2021-01-06 09:52:38.382 parsl:619 Rank:0 [INFO]  address_probe_timeout: 30
+2021-01-06 09:52:38.382 parsl:620 Rank:0 [INFO]  Prefetch capacity: 0
+2021-01-06 09:52:38.382 parsl:621 Rank:0 [INFO]  Heartbeat threshold: 120
+2021-01-06 09:52:38.382 parsl:622 Rank:0 [INFO]  Heartbeat period: 30
+2021-01-06 09:52:38.383 parsl:122 Rank:0 [INFO]  Manager started
+2021-01-06 09:52:38.394 parsl.executors.high_throughput.probe:47 Rank:0 [INFO]  Connected to interchange on cri16in001
+2021-01-06 09:52:38.394 parsl:129 Rank:0 [INFO]  Connection to Interchange successful on cri16in001
+2021-01-06 09:52:38.395 parsl:132 Rank:0 [INFO]  Task url : tcp://cri16in001:54390
+2021-01-06 09:52:38.395 parsl:133 Rank:0 [INFO]  Result url : tcp://cri16in001:54546
+2021-01-06 09:52:38.395 parsl:151 Rank:0 [INFO]  Manager connected
+2021-01-06 09:52:38.398 parsl:177 Rank:0 [INFO]  Manager will spawn 28 workers
+2021-01-06 09:52:38.711 parsl:228 Rank:0 [INFO]  [TASK PULL THREAD] starting
+2021-01-06 09:52:38.728 parsl:414 Rank:0 [INFO]  Loop start

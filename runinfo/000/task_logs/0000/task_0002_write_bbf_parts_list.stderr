@@ -1,5 +1,0 @@
---> executable follows <--
-
-    ls -d ../input/processed_geno_train/bbf_genotype/* | grep "chr22.p" |     sed -e 's/\.log//' -e 's/\.fam//' -e 's/\.bim//' -e 's/\.bed//' |     sort --version-sort | uniq > ../input/bbf_lists/bbf_geno_train_chr22_list.txt
-    
---> end executable <--

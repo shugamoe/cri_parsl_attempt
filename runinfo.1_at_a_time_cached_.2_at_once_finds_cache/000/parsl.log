@@ -1,0 +1,536 @@
+2021-01-06 09:45:51.774 parsl.dataflow.dflow:82 [DEBUG]  Starting DataFlowKernel with config
+Config(
+    app_cache=True, 
+    checkpoint_files=[], 
+    checkpoint_mode='task_exit', 
+    checkpoint_period=None, 
+    data_management_max_threads=10, 
+    executors=[HighThroughputExecutor(
+        address='cri16in001', 
+        address_probe_timeout=None, 
+        cores_per_worker=1, 
+        heartbeat_period=30, 
+        heartbeat_threshold=120, 
+        interchange_port_range=(55000, 56000), 
+        label='standard_16gb_1core', 
+        launch_cmd='process_worker_pool.py {debug} {max_workers} -a {addresses} -p {prefetch_capacity} -c {cores_per_worker} -m {mem_per_worker} --poll {poll_period} --task_port={task_port} --result_port={result_port} --logdir={logdir} --block_id={{block_id}} --hb_period={heartbeat_period} {address_probe_timeout_string} --hb_threshold={heartbeat_threshold} ', 
+        managed=True, 
+        max_workers=inf, 
+        mem_per_worker=None, 
+        poll_period=10, 
+        prefetch_capacity=0, 
+        provider=TorqueProvider(
+            account=None, 
+            channel=LocalChannel(
+                envs={}, 
+                script_dir=None, 
+                userhome='/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl'
+            ), 
+            cmd_timeout=120, 
+            init_blocks=1, 
+            launcher=SingleNodeLauncher(), 
+            max_blocks=30, 
+            min_blocks=0, 
+            nodes_per_block=1, 
+            parallelism=1, 
+            queue=None, 
+            scheduler_options='#PBS -l mem=16gb', 
+            walltime='1:00:00', 
+            worker_init="module load gcc/6.2.0; module load plink/2.0; cd /gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl; pwd; module load python/3.8.1; python3 -c 'import parsl; print(parsl.__version__)'; export PATH=~/.local/bin:$PATH; export PYTHONPATH='/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl:{PYTHONPATH}'"
+        ), 
+        storage_access=None, 
+        worker_debug=False, 
+        worker_logdir_root=None, 
+        worker_port_range=(54000, 55000), 
+        worker_ports=None, 
+        working_dir=None
+    ), HighThroughputExecutor(
+        address='cri16in001', 
+        address_probe_timeout=None, 
+        cores_per_worker=1, 
+        heartbeat_period=30, 
+        heartbeat_threshold=120, 
+        interchange_port_range=(55000, 56000), 
+        label='plink2_express_2gb_1core', 
+        launch_cmd='process_worker_pool.py {debug} {max_workers} -a {addresses} -p {prefetch_capacity} -c {cores_per_worker} -m {mem_per_worker} --poll {poll_period} --task_port={task_port} --result_port={result_port} --logdir={logdir} --block_id={{block_id}} --hb_period={heartbeat_period} {address_probe_timeout_string} --hb_threshold={heartbeat_threshold} ', 
+        managed=True, 
+        max_workers=inf, 
+        mem_per_worker=None, 
+        poll_period=10, 
+        prefetch_capacity=0, 
+        provider=TorqueProvider(
+            account=None, 
+            channel=LocalChannel(
+                envs={}, 
+                script_dir=None, 
+                userhome='/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl'
+            ), 
+            cmd_timeout=120, 
+            init_blocks=0, 
+            launcher=SingleNodeLauncher(), 
+            max_blocks=45, 
+            min_blocks=0, 
+            nodes_per_block=1, 
+            parallelism=1, 
+            queue=None, 
+            scheduler_options='#PBS -l mem=2gb', 
+            walltime='01:00:00', 
+            worker_init="module load gcc/6.2.0; module load plink/2.0; cd /gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl; pwd; module load python/3.8.1; python3 -c 'import parsl; print(parsl.__version__)'; export PATH=~/.local/bin:$PATH; export PYTHONPATH='/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl:{PYTHONPATH}'"
+        ), 
+        storage_access=None, 
+        worker_debug=True, 
+        worker_logdir_root=None, 
+        worker_port_range=(54000, 55000), 
+        worker_ports=None, 
+        working_dir=None
+    ), HighThroughputExecutor(
+        address='cri16in001', 
+        address_probe_timeout=None, 
+        cores_per_worker=1, 
+        heartbeat_period=30, 
+        heartbeat_threshold=120, 
+        interchange_port_range=(55000, 56000), 
+        label='plink1_express_2gb_1core', 
+        launch_cmd='process_worker_pool.py {debug} {max_workers} -a {addresses} -p {prefetch_capacity} -c {cores_per_worker} -m {mem_per_worker} --poll {poll_period} --task_port={task_port} --result_port={result_port} --logdir={logdir} --block_id={{block_id}} --hb_period={heartbeat_period} {address_probe_timeout_string} --hb_threshold={heartbeat_threshold} ', 
+        managed=True, 
+        max_workers=inf, 
+        mem_per_worker=None, 
+        poll_period=10, 
+        prefetch_capacity=0, 
+        provider=TorqueProvider(
+            account=None, 
+            channel=LocalChannel(
+                envs={}, 
+                script_dir=None, 
+                userhome='/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl'
+            ), 
+            cmd_timeout=120, 
+            init_blocks=0, 
+            launcher=SingleNodeLauncher(), 
+            max_blocks=45, 
+            min_blocks=0, 
+            nodes_per_block=1, 
+            parallelism=1, 
+            queue=None, 
+            scheduler_options='#PBS -l mem=2gb', 
+            walltime='01:00:00', 
+            worker_init="module load gcc/6.2.0; module load plink/1.90; cd /gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl; pwd; module load python/3.8.1; python3 -c 'import parsl; print(parsl.__version__)'; export PATH=~/.local/bin:$PATH; export PYTHONPATH='/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl:{PYTHONPATH}'"
+        ), 
+        storage_access=None, 
+        worker_debug=True, 
+        worker_logdir_root=None, 
+        worker_port_range=(54000, 55000), 
+        worker_ports=None, 
+        working_dir=None
+    )], 
+    initialize_logging=True, 
+    max_idletime=120.0, 
+    monitoring=None, 
+    retries=0, 
+    run_dir='runinfo', 
+    strategy='simple', 
+    usage_tracking=False
+)
+2021-01-06 09:45:51.775 parsl.dataflow.dflow:87 [INFO]  Parsl version: 1.0.0
+2021-01-06 09:45:51.775 parsl.dataflow.usage_tracking.usage:126 [DEBUG]  Tracking status: False
+2021-01-06 09:45:51.775 parsl.dataflow.dflow:114 [INFO]  Run id is: 417ab4c5-27b2-486c-859e-ceacb601771e
+2021-01-06 09:45:52.143 parsl.dataflow.memoization:128 [INFO]  App caching initialized
+2021-01-06 09:45:52.144 parsl.dataflow.strategy:128 [DEBUG]  Scaling strategy: simple
+2021-01-06 09:45:52.148 parsl.executors.high_throughput.executor:457 [DEBUG]  Starting queue management thread
+2021-01-06 09:45:52.149 parsl.executors.high_throughput.executor:341 [DEBUG]  [MTHREAD] queue management worker starting
+2021-01-06 09:45:52.149 parsl.executors.high_throughput.executor:461 [DEBUG]  Started queue management thread
+2021-01-06 09:45:52.175 parsl.executors.high_throughput.executor:304 [DEBUG]  Created management thread: <Thread(HTEX-Queue-Management-Thread, started daemon 139907217487616)>
+2021-01-06 09:45:52.176 parsl.executors.high_throughput.executor:280 [DEBUG]  Launch command: process_worker_pool.py   -a cri16in001 -p 0 -c 1 -m None --poll 10 --task_port=54873 --result_port=54264 --logdir=/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl/runinfo/000/standard_16gb_1core --block_id={block_id} --hb_period=30  --hb_threshold=120 
+2021-01-06 09:45:52.176 parsl.executors.high_throughput.executor:283 [DEBUG]  Starting HighThroughputExecutor with provider:
+TorqueProvider(
+    account=None, 
+    channel=LocalChannel(
+        envs={}, 
+        script_dir='/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl/runinfo/000/submit_scripts', 
+        userhome='/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl'
+    ), 
+    cmd_timeout=120, 
+    init_blocks=1, 
+    launcher=SingleNodeLauncher(), 
+    max_blocks=30, 
+    min_blocks=0, 
+    nodes_per_block=1, 
+    parallelism=1, 
+    queue=None, 
+    scheduler_options='#PBS -l mem=16gb', 
+    walltime='1:00:00', 
+    worker_init="module load gcc/6.2.0; module load plink/2.0; cd /gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl; pwd; module load python/3.8.1; python3 -c 'import parsl; print(parsl.__version__)'; export PATH=~/.local/bin:$PATH; export PYTHONPATH='/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl:{PYTHONPATH}'"
+)
+2021-01-06 09:45:52.189 parsl.providers.torque.torque:177 [DEBUG]  Requesting nodes_per_block:1 tasks_per_node:1
+2021-01-06 09:45:52.190 parsl.providers.torque.torque:197 [DEBUG]  Writing submit script
+2021-01-06 09:45:52.280 parsl.executors.high_throughput.executor:581 [DEBUG]  Launched block 0->27466590.cri16sc001
+2021-01-06 09:45:52.284 parsl.executors.high_throughput.executor:457 [DEBUG]  Starting queue management thread
+2021-01-06 09:45:52.284 parsl.executors.high_throughput.executor:341 [DEBUG]  [MTHREAD] queue management worker starting
+2021-01-06 09:45:52.284 parsl.executors.high_throughput.executor:461 [DEBUG]  Started queue management thread
+2021-01-06 09:45:52.314 parsl.executors.high_throughput.executor:304 [DEBUG]  Created management thread: <Thread(HTEX-Queue-Management-Thread, started daemon 139906938562304)>
+2021-01-06 09:45:52.315 parsl.executors.high_throughput.executor:280 [DEBUG]  Launch command: process_worker_pool.py --debug  -a cri16in001 -p 0 -c 1 -m None --poll 10 --task_port=54942 --result_port=54547 --logdir=/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl/runinfo/000/plink2_express_2gb_1core --block_id={block_id} --hb_period=30  --hb_threshold=120 
+2021-01-06 09:45:52.315 parsl.executors.high_throughput.executor:283 [DEBUG]  Starting HighThroughputExecutor with provider:
+TorqueProvider(
+    account=None, 
+    channel=LocalChannel(
+        envs={}, 
+        script_dir='/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl/runinfo/000/submit_scripts', 
+        userhome='/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl'
+    ), 
+    cmd_timeout=120, 
+    init_blocks=0, 
+    launcher=SingleNodeLauncher(), 
+    max_blocks=45, 
+    min_blocks=0, 
+    nodes_per_block=1, 
+    parallelism=1, 
+    queue=None, 
+    scheduler_options='#PBS -l mem=2gb', 
+    walltime='01:00:00', 
+    worker_init="module load gcc/6.2.0; module load plink/2.0; cd /gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl; pwd; module load python/3.8.1; python3 -c 'import parsl; print(parsl.__version__)'; export PATH=~/.local/bin:$PATH; export PYTHONPATH='/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl:{PYTHONPATH}'"
+)
+2021-01-06 09:45:52.331 parsl.executors.high_throughput.executor:457 [DEBUG]  Starting queue management thread
+2021-01-06 09:45:52.332 parsl.executors.high_throughput.executor:341 [DEBUG]  [MTHREAD] queue management worker starting
+2021-01-06 09:45:52.332 parsl.executors.high_throughput.executor:461 [DEBUG]  Started queue management thread
+2021-01-06 09:45:52.361 parsl.executors.high_throughput.executor:304 [DEBUG]  Created management thread: <Thread(HTEX-Queue-Management-Thread, started daemon 139906659636992)>
+2021-01-06 09:45:52.361 parsl.executors.high_throughput.executor:280 [DEBUG]  Launch command: process_worker_pool.py --debug  -a cri16in001 -p 0 -c 1 -m None --poll 10 --task_port=54319 --result_port=54759 --logdir=/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl/runinfo/000/plink1_express_2gb_1core --block_id={block_id} --hb_period=30  --hb_threshold=120 
+2021-01-06 09:45:52.362 parsl.executors.high_throughput.executor:283 [DEBUG]  Starting HighThroughputExecutor with provider:
+TorqueProvider(
+    account=None, 
+    channel=LocalChannel(
+        envs={}, 
+        script_dir='/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl/runinfo/000/submit_scripts', 
+        userhome='/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl'
+    ), 
+    cmd_timeout=120, 
+    init_blocks=0, 
+    launcher=SingleNodeLauncher(), 
+    max_blocks=45, 
+    min_blocks=0, 
+    nodes_per_block=1, 
+    parallelism=1, 
+    queue=None, 
+    scheduler_options='#PBS -l mem=2gb', 
+    walltime='01:00:00', 
+    worker_init="module load gcc/6.2.0; module load plink/1.90; cd /gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl; pwd; module load python/3.8.1; python3 -c 'import parsl; print(parsl.__version__)'; export PATH=~/.local/bin:$PATH; export PYTHONPATH='/gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl:{PYTHONPATH}'"
+)
+2021-01-06 09:45:52.375 parsl.dataflow.task_status_poller:74 [DEBUG]  Adding executor standard_16gb_1core
+2021-01-06 09:45:52.376 parsl.dataflow.task_status_poller:74 [DEBUG]  Adding executor plink2_express_2gb_1core
+2021-01-06 09:45:52.376 parsl.dataflow.task_status_poller:74 [DEBUG]  Adding executor plink1_express_2gb_1core
+2021-01-06 09:45:52.383 parsl.data_provider.files:54 [DEBUG]  Making clean copy of File object <<class 'parsl.data_provider.files.File'> at 0x7f3ec44c5780 url=../input/geno_train/RAGOC.MAF005R7.chr22.p1.train.gz scheme=file netloc= path=../input/geno_train/RAGOC.MAF005R7.chr22.p1.train.gz filename=RAGOC.MAF005R7.chr22.p1.train.gz>
+2021-01-06 09:45:52.384 parsl.data_provider.data_manager:128 [DEBUG]  stage_in checking Staging provider NoOpFileStaging()
+2021-01-06 09:45:52.384 parsl.data_provider.file_noop:13 [DEBUG]  NoOpFileStaging checking file <<class 'parsl.data_provider.files.File'> at 0x7f3ec44c5b40 url=../input/geno_train/RAGOC.MAF005R7.chr22.p1.train.gz scheme=file netloc= path=../input/geno_train/RAGOC.MAF005R7.chr22.p1.train.gz filename=RAGOC.MAF005R7.chr22.p1.train.gz>
+2021-01-06 09:45:52.385 parsl.data_provider.data_manager:87 [DEBUG]  stage_in checking Staging provider NoOpFileStaging()
+2021-01-06 09:45:52.385 parsl.data_provider.file_noop:13 [DEBUG]  NoOpFileStaging checking file <<class 'parsl.data_provider.files.File'> at 0x7f3ec44c5b40 url=../input/geno_train/RAGOC.MAF005R7.chr22.p1.train.gz scheme=file netloc= path=../input/geno_train/RAGOC.MAF005R7.chr22.p1.train.gz filename=RAGOC.MAF005R7.chr22.p1.train.gz>
+2021-01-06 09:45:52.386 parsl.data_provider.files:54 [DEBUG]  Making clean copy of File object <<class 'parsl.data_provider.files.File'> at 0x7f3ec44c5820 url=../input/gwas_combined/RAGOC.MAF005R7.overall.train.chr22.logistic.gz scheme=file netloc= path=../input/gwas_combined/RAGOC.MAF005R7.overall.train.chr22.logistic.gz filename=RAGOC.MAF005R7.overall.train.chr22.logistic.gz>
+2021-01-06 09:45:52.386 parsl.data_provider.data_manager:128 [DEBUG]  stage_in checking Staging provider NoOpFileStaging()
+2021-01-06 09:45:52.387 parsl.data_provider.file_noop:13 [DEBUG]  NoOpFileStaging checking file <<class 'parsl.data_provider.files.File'> at 0x7f3ec44c5b90 url=../input/gwas_combined/RAGOC.MAF005R7.overall.train.chr22.logistic.gz scheme=file netloc= path=../input/gwas_combined/RAGOC.MAF005R7.overall.train.chr22.logistic.gz filename=RAGOC.MAF005R7.overall.train.chr22.logistic.gz>
+2021-01-06 09:45:52.387 parsl.data_provider.data_manager:87 [DEBUG]  stage_in checking Staging provider NoOpFileStaging()
+2021-01-06 09:45:52.387 parsl.data_provider.file_noop:13 [DEBUG]  NoOpFileStaging checking file <<class 'parsl.data_provider.files.File'> at 0x7f3ec44c5b90 url=../input/gwas_combined/RAGOC.MAF005R7.overall.train.chr22.logistic.gz scheme=file netloc= path=../input/gwas_combined/RAGOC.MAF005R7.overall.train.chr22.logistic.gz filename=RAGOC.MAF005R7.overall.train.chr22.logistic.gz>
+2021-01-06 09:45:52.388 parsl.dataflow.dflow:533 [DEBUG]  Adding output dependencies
+2021-01-06 09:45:52.388 parsl.data_provider.files:54 [DEBUG]  Making clean copy of File object <<class 'parsl.data_provider.files.File'> at 0x7f3ec44c5a00 url=../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz scheme=file netloc= path=../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz filename=RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz>
+2021-01-06 09:45:52.388 parsl.dataflow.dflow:547 [DEBUG]  Submitting stage out for output file <<class 'parsl.data_provider.files.File'> at 0x7f3ec44c5a00 url=../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz scheme=file netloc= path=../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz filename=RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz>
+2021-01-06 09:45:52.389 parsl.data_provider.data_manager:160 [DEBUG]  stage_out checking Staging provider NoOpFileStaging()
+2021-01-06 09:45:52.389 parsl.data_provider.file_noop:17 [DEBUG]  NoOpFileStaging checking file <<class 'parsl.data_provider.files.File'> at 0x7f3ec44c5e60 url=../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz scheme=file netloc= path=../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz filename=RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz>
+2021-01-06 09:45:52.389 parsl.dataflow.dflow:553 [DEBUG]  No stageout dependency for <<class 'parsl.data_provider.files.File'> at 0x7f3ec44c5a00 url=../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz scheme=file netloc= path=../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz filename=RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz>
+2021-01-06 09:45:52.390 parsl.app.futures:71 [DEBUG]  Creating DataFuture with parent: <AppFuture super=<AppFuture at 0x7f3ec44c5960 state=pending>> and file: <<class 'parsl.data_provider.files.File'> at 0x7f3ec44c5a00 url=../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz scheme=file netloc= path=../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz filename=RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz>
+2021-01-06 09:45:52.390 parsl.data_provider.data_manager:46 [DEBUG]  stage_out checking Staging provider NoOpFileStaging()
+2021-01-06 09:45:52.391 parsl.data_provider.file_noop:17 [DEBUG]  NoOpFileStaging checking file <<class 'parsl.data_provider.files.File'> at 0x7f3ec44c5e60 url=../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz scheme=file netloc= path=../input/processed_geno_train/genotype/RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz filename=RAGOC.MAF005R7.chr22.p1.train.pval0.2_avginfscore0.9_maf0.01.gz>
+2021-01-06 09:45:52.391 parsl.dataflow.dflow:772 [INFO]  Task 0 submitted for App filter_dose, not waiting on any dependency
+2021-01-06 09:45:52.391 parsl.dataflow.dflow:780 [DEBUG]  Task 0 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7f3ec44c5960 state=pending>>
+2021-01-06 09:45:52.391 parsl.dataflow.memoization:159 [DEBUG]  Ignoring these kwargs for checkpointing: ['stdout', 'stderr']
+2021-01-06 09:45:52.391 parsl.dataflow.memoization:161 [DEBUG]  Ignoring kwarg stdout
+2021-01-06 09:45:52.391 parsl.dataflow.memoization:161 [DEBUG]  Ignoring kwarg stderr
+2021-01-06 09:45:53.089 parsl.dataflow.memoization:200 [DEBUG]  Task 0 has memoization hash 07ad077935bab8ede17ab280b1ebb596
+2021-01-06 09:45:53.089 parsl.dataflow.memoization:206 [INFO]  Task 0 had no result in cache
+2021-01-06 09:45:53.090 parsl.executors.high_throughput.executor:546 [DEBUG]  Pushing function <function filter_dose at 0x7f3ec44bdaf0> to queue with args (<function filter_dose at 0x7f3ec4fbb690>,)
+2021-01-06 09:45:53.091 parsl.dataflow.dflow:500 [INFO]  Task 0 launched on executor standard_16gb_1core
+2021-01-06 09:45:53.144 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:45:53.144 parsl.dataflow.task_status_poller:26 [DEBUG]  Polling standard_16gb_1core
+2021-01-06 09:45:53.198 parsl.providers.torque.torque:129 [DEBUG]  coerced job_id 27466590.cri16sc001 -> 27466590.cri16sc001
+2021-01-06 09:45:53.199 parsl.dataflow.task_status_poller:26 [DEBUG]  Polling plink2_express_2gb_1core
+2021-01-06 09:45:53.199 parsl.dataflow.task_status_poller:26 [DEBUG]  Polling plink1_express_2gb_1core
+2021-01-06 09:45:53.202 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 0/1 running/pending blocks, and 0 connected workers
+2021-01-06 09:45:53.209 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:45:53.217 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:45:58.144 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:45:58.148 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 0/1 running/pending blocks, and 0 connected workers
+2021-01-06 09:45:58.156 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:45:58.163 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:46:03.145 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:46:03.148 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 0/1 running/pending blocks, and 0 connected workers
+2021-01-06 09:46:03.156 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:46:03.164 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:46:08.145 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:46:08.148 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 0/1 running/pending blocks, and 28 connected workers
+2021-01-06 09:46:08.156 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:46:08.163 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:46:13.145 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:46:13.148 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 0/1 running/pending blocks, and 28 connected workers
+2021-01-06 09:46:13.157 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:46:13.164 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:46:18.145 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:46:18.148 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 0/1 running/pending blocks, and 28 connected workers
+2021-01-06 09:46:18.155 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:46:18.163 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:46:23.145 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:46:23.149 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 0/1 running/pending blocks, and 28 connected workers
+2021-01-06 09:46:23.157 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:46:23.164 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:46:28.145 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:46:28.149 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 0/1 running/pending blocks, and 28 connected workers
+2021-01-06 09:46:28.156 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:46:28.164 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:46:33.146 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:46:33.149 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 0/1 running/pending blocks, and 28 connected workers
+2021-01-06 09:46:33.156 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:46:33.165 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:46:38.146 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:46:38.150 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 0/1 running/pending blocks, and 28 connected workers
+2021-01-06 09:46:38.158 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:46:38.165 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:46:43.146 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:46:43.149 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 0/1 running/pending blocks, and 28 connected workers
+2021-01-06 09:46:43.157 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:46:43.164 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:46:48.146 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:46:48.149 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 0/1 running/pending blocks, and 28 connected workers
+2021-01-06 09:46:48.157 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:46:48.165 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:46:53.146 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:46:53.147 parsl.dataflow.task_status_poller:26 [DEBUG]  Polling standard_16gb_1core
+2021-01-06 09:46:53.201 parsl.providers.torque.torque:129 [DEBUG]  coerced job_id 27466590.cri16sc001 -> 27466590.cri16sc001
+2021-01-06 09:46:53.202 parsl.dataflow.task_status_poller:26 [DEBUG]  Polling plink2_express_2gb_1core
+2021-01-06 09:46:53.202 parsl.dataflow.task_status_poller:26 [DEBUG]  Polling plink1_express_2gb_1core
+2021-01-06 09:46:53.205 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:46:53.212 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:46:53.219 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:46:58.147 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:46:58.150 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:46:58.156 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:46:58.163 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:47:03.147 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:47:03.149 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:47:03.156 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:47:03.163 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:47:08.147 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:47:08.150 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:47:08.158 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:47:08.165 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:47:13.147 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:47:13.150 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:47:13.157 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:47:13.165 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:47:18.147 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:47:18.150 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:47:18.157 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:47:18.165 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:47:23.147 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:47:23.150 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:47:23.158 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:47:23.165 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:47:28.148 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:47:28.150 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:47:28.157 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:47:28.164 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:47:33.148 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:47:33.151 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:47:33.157 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:47:33.165 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:47:38.148 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:47:38.151 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:47:38.158 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:47:38.165 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:47:43.148 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:47:43.151 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:47:43.159 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:47:43.166 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:47:48.148 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:47:48.151 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:47:48.159 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:47:48.166 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:47:53.149 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:47:53.149 parsl.dataflow.task_status_poller:26 [DEBUG]  Polling standard_16gb_1core
+2021-01-06 09:47:53.205 parsl.providers.torque.torque:129 [DEBUG]  coerced job_id 27466590.cri16sc001 -> 27466590.cri16sc001
+2021-01-06 09:47:53.206 parsl.dataflow.task_status_poller:26 [DEBUG]  Polling plink2_express_2gb_1core
+2021-01-06 09:47:53.206 parsl.dataflow.task_status_poller:26 [DEBUG]  Polling plink1_express_2gb_1core
+2021-01-06 09:47:53.210 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:47:53.217 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:47:53.225 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:47:58.149 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:47:58.152 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:47:58.159 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:47:58.166 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:48:03.149 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:48:03.152 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:48:03.159 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:48:03.165 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:48:08.149 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:48:08.152 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:48:08.158 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:48:08.166 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:48:13.150 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:48:13.153 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:48:13.160 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:48:13.167 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:48:18.150 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:48:18.153 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:48:18.161 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:48:18.168 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:48:23.150 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:48:23.153 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:48:23.160 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:48:23.167 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:48:28.150 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:48:28.153 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:48:28.160 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:48:28.166 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:48:33.150 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:48:33.153 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:48:33.161 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:48:33.167 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:48:38.150 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:48:38.154 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:48:38.161 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:48:38.168 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:48:43.151 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:48:43.154 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:48:43.161 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:48:43.168 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:48:48.151 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:48:48.154 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:48:48.161 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:48:48.167 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:48:53.151 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:48:53.152 parsl.dataflow.task_status_poller:26 [DEBUG]  Polling standard_16gb_1core
+2021-01-06 09:48:53.206 parsl.providers.torque.torque:129 [DEBUG]  coerced job_id 27466590.cri16sc001 -> 27466590.cri16sc001
+2021-01-06 09:48:53.207 parsl.dataflow.task_status_poller:26 [DEBUG]  Polling plink2_express_2gb_1core
+2021-01-06 09:48:53.208 parsl.dataflow.task_status_poller:26 [DEBUG]  Polling plink1_express_2gb_1core
+2021-01-06 09:48:53.211 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:48:53.218 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:48:53.225 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:48:58.151 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:48:58.154 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:48:58.160 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:48:58.167 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:49:03.151 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:49:03.154 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:49:03.162 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:49:03.170 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:49:08.152 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:49:08.154 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:49:08.161 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:49:08.169 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:49:13.152 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:49:13.155 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:49:13.162 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:49:13.168 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:49:18.152 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:49:18.155 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:49:18.163 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:49:18.170 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:49:23.152 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:49:23.155 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:49:23.162 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:49:23.170 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:49:28.152 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:49:28.155 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:49:28.162 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:49:28.169 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:49:33.153 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:49:33.155 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:49:33.164 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:49:33.172 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:49:38.153 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:49:38.156 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:49:38.163 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:49:38.170 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:49:43.153 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:49:43.156 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:49:43.164 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:49:43.171 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:49:48.153 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:49:48.156 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:49:48.163 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:49:48.170 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:49:53.153 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:49:53.154 parsl.dataflow.task_status_poller:26 [DEBUG]  Polling standard_16gb_1core
+2021-01-06 09:49:53.210 parsl.providers.torque.torque:129 [DEBUG]  coerced job_id 27466590.cri16sc001 -> 27466590.cri16sc001
+2021-01-06 09:49:53.211 parsl.dataflow.task_status_poller:26 [DEBUG]  Polling plink2_express_2gb_1core
+2021-01-06 09:49:53.211 parsl.dataflow.task_status_poller:26 [DEBUG]  Polling plink1_express_2gb_1core
+2021-01-06 09:49:53.214 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:49:53.222 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:49:53.229 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:49:58.154 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:49:58.156 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:49:58.163 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:49:58.171 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:50:03.154 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:50:03.157 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:50:03.165 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:50:03.173 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:50:08.154 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:50:08.157 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:50:08.164 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:50:08.172 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:50:13.154 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:50:13.157 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:50:13.164 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:50:13.171 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:50:18.154 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:50:18.157 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:50:18.165 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:50:18.173 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:50:23.155 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:50:23.158 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:50:23.164 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:50:23.171 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:50:28.155 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:50:28.157 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:50:28.164 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:50:28.172 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:50:33.155 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:50:33.158 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:50:33.166 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:50:33.172 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:50:38.155 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:50:38.158 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:50:38.165 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:50:38.172 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:50:43.155 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:50:43.158 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:50:43.166 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:50:43.173 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:50:48.155 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:50:48.158 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:50:48.165 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:50:48.173 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:50:53.156 parsl.dataflow.task_status_poller:62 [DEBUG]  Polling
+2021-01-06 09:50:53.156 parsl.dataflow.task_status_poller:26 [DEBUG]  Polling standard_16gb_1core
+2021-01-06 09:50:53.211 parsl.providers.torque.torque:129 [DEBUG]  coerced job_id 27466590.cri16sc001 -> 27466590.cri16sc001
+2021-01-06 09:50:53.212 parsl.dataflow.task_status_poller:26 [DEBUG]  Polling plink2_express_2gb_1core
+2021-01-06 09:50:53.213 parsl.dataflow.task_status_poller:26 [DEBUG]  Polling plink1_express_2gb_1core
+2021-01-06 09:50:53.216 parsl.dataflow.strategy:204 [DEBUG]  Executor standard_16gb_1core has 1 active tasks, 1/0 running/pending blocks, and 28 connected workers
+2021-01-06 09:50:53.223 parsl.dataflow.strategy:204 [DEBUG]  Executor plink2_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:50:53.231 parsl.dataflow.strategy:204 [DEBUG]  Executor plink1_express_2gb_1core has 0 active tasks, 0/0 running/pending blocks, and 0 connected workers
+2021-01-06 09:50:57.956 parsl.dataflow.dflow:289 [INFO]  Task 0 completed
+2021-01-06 09:50:57.956 parsl.dataflow.dflow:293 [INFO]  Standard output for task 0 available at /gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl/runinfo/000/task_logs/0000/task_0000_filter_dose.stdout
+2021-01-06 09:50:57.957 parsl.dataflow.dflow:295 [INFO]  Standard error for task 0 available at /gpfs/data/gao-lab/Julian/gaolab_hub/projects/prs_aa_ancestry/cri/sbayesr_parsl/runinfo/000/task_logs/0000/task_0000_filter_dose.stderr
+2021-01-06 09:50:57.958 parsl.dataflow.dflow:913 [INFO]  DFK cleanup initiated
+2021-01-06 09:50:57.958 parsl.dataflow.dflow:816 [INFO]  Summary of tasks in DFK:
+2021-01-06 09:50:57.959 parsl.dataflow.dflow:829 [INFO]  Tasks in state States.done: 1
+2021-01-06 09:50:57.959 parsl.dataflow.dflow:835 [INFO]  End of summary
+2021-01-06 09:50:57.970 parsl.dataflow.dflow:1030 [DEBUG]  Task 0 checkpointed
+2021-01-06 09:50:57.972 parsl.dataflow.dflow:1040 [INFO]  Done checkpointing 1 tasks
+2021-01-06 09:50:57.979 parsl.dataflow.dflow:1038 [DEBUG]  No tasks checkpointed in this pass.
+2021-01-06 09:50:57.980 parsl.dataflow.dflow:937 [INFO]  Terminating flow_control and strategy threads
+2021-01-06 09:50:57.981 parsl.executors.high_throughput.executor:510 [DEBUG]  [HOLD_BLOCK]: Sending hold to manager: b6f6ca9881df
+2021-01-06 09:50:57.984 parsl.executors.high_throughput.executor:479 [DEBUG]  Sent hold request to worker: b6f6ca9881df
+2021-01-06 09:50:58.119 parsl.executors.high_throughput.executor:642 [INFO]  Attempting HighThroughputExecutor shutdown
+2021-01-06 09:50:58.119 parsl.executors.high_throughput.executor:644 [INFO]  Finished HighThroughputExecutor shutdown attempt
+2021-01-06 09:50:58.157 parsl.executors.high_throughput.executor:642 [INFO]  Attempting HighThroughputExecutor shutdown
+2021-01-06 09:50:58.157 parsl.executors.high_throughput.executor:644 [INFO]  Finished HighThroughputExecutor shutdown attempt
+2021-01-06 09:50:58.212 parsl.executors.high_throughput.executor:642 [INFO]  Attempting HighThroughputExecutor shutdown
+2021-01-06 09:50:58.213 parsl.executors.high_throughput.executor:644 [INFO]  Finished HighThroughputExecutor shutdown attempt
+2021-01-06 09:50:58.213 parsl.executors.threads:105 [DEBUG]  Done with executor shutdown
+2021-01-06 09:50:58.213 parsl.dataflow.dflow:960 [INFO]  DFK cleanup complete
